@@ -1,0 +1,696 @@
+/* Give Online Page Styles */
+
+/* Quick Give Section */
+.quick-give-section {
+    background: var(--gray-50);
+}
+
+.quick-give-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-6);
+    margin-top: var(--space-8);
+}
+
+.quick-option {
+    background: var(--white);
+    padding: var(--space-8) var(--space-6);
+    border-radius: var(--radius-lg);
+    text-align: center;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--gray-200);
+    transition: var(--transition);
+}
+
+.quick-option:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--secondary-color);
+}
+
+.option-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--light-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--space-4);
+}
+
+.option-icon i {
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+.quick-option h3 {
+    color: var(--primary-color);
+    margin-bottom: var(--space-3);
+    font-size: var(--text-xl);
+}
+
+.quick-option p {
+    color: var(--gray-600);
+    margin-bottom: var(--space-6);
+    line-height: 1.6;
+}
+
+/* Giving Form Section */
+.giving-form-section {
+    background: var(--gray-50);
+}
+
+.giving-form-container {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--gray-200);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.form-header {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    color: var(--white);
+    padding: var(--space-8);
+    text-align: center;
+}
+
+.form-header h2 {
+    color: var(--white);
+    margin-bottom: var(--space-3);
+    font-size: var(--text-2xl);
+}
+
+.form-header p {
+    font-size: var(--text-base);
+    opacity: 0.9;
+    margin-bottom: var(--space-4);
+    line-height: 1.6;
+}
+
+.security-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    background: rgba(255, 255, 255, 0.2);
+    padding: var(--space-2) var(--space-4);
+    border-radius: 20px;
+    font-size: var(--text-sm);
+}
+
+.security-badge i {
+    color: var(--secondary-color);
+}
+
+.giving-form {
+    padding: var(--space-8);
+}
+
+.form-section {
+    margin-bottom: var(--space-8);
+    padding-bottom: var(--space-8);
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.form-section:last-of-type {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.form-section h3 {
+    color: var(--primary-color);
+    margin-bottom: var(--space-4);
+    font-size: var(--text-lg);
+}
+
+/* Amount Options */
+.amount-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: var(--space-4);
+}
+
+.amount-option {
+    background: var(--gray-50);
+    border: 2px solid var(--gray-300);
+    border-radius: var(--radius);
+    padding: var(--space-4);
+    text-align: center;
+    font-weight: 600;
+    color: var(--gray-600);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.amount-option:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.amount-option.active {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--white);
+}
+
+.custom-amount {
+    position: relative;
+}
+
+.custom-amount input {
+    width: 100%;
+    border: none;
+    background: none;
+    text-align: center;
+    font-weight: 600;
+    color: var(--gray-600);
+    outline: none;
+}
+
+.custom-amount input::placeholder {
+    color: var(--gray-600);
+}
+
+.custom-amount.active input {
+    color: var(--primary-color);
+}
+
+/* Frequency Options */
+.frequency-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: var(--space-4);
+}
+
+.frequency-option {
+    position: relative;
+    cursor: pointer;
+}
+
+.frequency-option input {
+    position: absolute;
+    opacity: 0;
+}
+
+.option-content {
+    background: var(--gray-50);
+    border: 2px solid var(--gray-300);
+    border-radius: var(--radius);
+    padding: var(--space-5);
+    text-align: center;
+    transition: var(--transition);
+    height: 100%;
+}
+
+.frequency-option input:checked + .option-content {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--white);
+}
+
+.frequency-option:hover .option-content {
+    border-color: var(--primary-color);
+}
+
+.option-content i {
+    font-size: 1.5rem;
+    margin-bottom: var(--space-2);
+    display: block;
+    color: inherit;
+}
+
+.option-content span {
+    display: block;
+    font-weight: 600;
+    margin-bottom: var(--space-1);
+}
+
+.option-content small {
+    display: block;
+    opacity: 0.8;
+    font-size: var(--text-sm);
+}
+
+/* Payment Tabs */
+.payment-tabs {
+    display: flex;
+    gap: 1px;
+    margin-bottom: var(--space-6);
+    background: var(--gray-200);
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+
+.payment-tab {
+    flex: 1;
+    background: var(--gray-50);
+    border: none;
+    padding: var(--space-4);
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+    font-weight: 600;
+    color: var(--gray-600);
+}
+
+.payment-tab.active {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+.payment-tab:hover:not(.active) {
+    background: var(--gray-200);
+    color: var(--primary-color);
+}
+
+.payment-content {
+    display: none;
+}
+
+.payment-content.active {
+    display: block;
+    animation: fadeIn 0.3s ease-in;
+}
+
+/* M-Pesa STK Push */
+.mpesa-instructions {
+    background: var(--light-blue);
+    padding: var(--space-5);
+    border-radius: var(--radius);
+    margin-bottom: var(--space-6);
+}
+
+.instruction-step {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    margin-bottom: var(--space-4);
+}
+
+.instruction-step:last-child {
+    margin-bottom: 0;
+}
+
+.step-number {
+    background: var(--primary-color);
+    color: var(--white);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+.paybill-info {
+    background: var(--gray-50);
+    padding: var(--space-5);
+    border-radius: var(--radius);
+    margin-top: var(--space-4);
+}
+
+.paybill-info h4 {
+    color: var(--primary-color);
+    margin-bottom: var(--space-3);
+}
+
+.paybill-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-3) 0;
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.paybill-item:last-child {
+    border-bottom: none;
+}
+
+.paybill-item strong {
+    color: var(--primary-color);
+}
+
+/* PayPal */
+.paypal-info {
+    text-align: center;
+    padding: var(--space-8);
+}
+
+.paypal-info i {
+    font-size: 3rem;
+    color: #003087;
+    margin-bottom: var(--space-4);
+    display: block;
+}
+
+.paypal-info p {
+    color: var(--gray-600);
+    margin-bottom: var(--space-3);
+    line-height: 1.6;
+}
+
+.exchange-note {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: var(--text-sm);
+}
+
+/* Manual Payment */
+.manual-payment-info h4 {
+    color: var(--primary-color);
+    margin-bottom: var(--space-4);
+}
+
+.bank-account {
+    background: var(--gray-50);
+    padding: var(--space-5);
+    border-radius: var(--radius);
+    margin-bottom: var(--space-4);
+    border-left: 4px solid var(--primary-color);
+}
+
+.bank-account:last-child {
+    margin-bottom: 0;
+}
+
+.bank-account h5 {
+    color: var(--primary-color);
+    margin-bottom: var(--space-3);
+    font-size: var(--text-base);
+}
+
+.bank-details {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+}
+
+.detail-item i {
+    color: var(--primary-color);
+    width: 20px;
+    text-align: center;
+}
+
+.security-note {
+    background: #fff3cd;
+    border: 1px solid #ffeaa7;
+    color: #856404;
+    padding: var(--space-4);
+    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    margin-top: var(--space-4);
+}
+
+.security-note i {
+    color: #856404;
+}
+
+/* Donation Summary */
+.donation-summary {
+    background: var(--light-blue);
+    padding: var(--space-6);
+    border-radius: var(--radius);
+    margin-bottom: var(--space-6);
+}
+
+.donation-summary h3 {
+    color: var(--primary-color);
+    margin-bottom: var(--space-4);
+    text-align: center;
+}
+
+.summary-items {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: var(--space-3);
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.summary-item span:first-child {
+    color: var(--gray-600);
+    font-weight: 500;
+}
+
+.summary-item span:last-child {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.summary-total {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: var(--text-lg);
+    color: var(--primary-color);
+    margin-top: var(--space-4);
+    padding-top: var(--space-4);
+    border-top: 2px solid var(--gray-200);
+}
+
+/* Form Options */
+.form-options {
+    margin-bottom: var(--space-6);
+}
+
+.checkbox-option {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-4);
+    margin-bottom: var(--space-4);
+    cursor: pointer;
+}
+
+.checkbox-option input {
+    margin-top: var(--space-1);
+}
+
+.checkmark {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--gray-300);
+    border-radius: 3px;
+    position: relative;
+    flex-shrink: 0;
+    margin-top: var(--space-1);
+    transition: var(--transition);
+}
+
+.checkbox-option input:checked + .checkmark {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.checkbox-option input:checked + .checkmark::after {
+    content: '✓';
+    position: absolute;
+    color: var(--white);
+    font-size: 14px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.checkbox-option span {
+    color: var(--gray-600);
+    line-height: 1.5;
+    font-size: var(--text-sm);
+}
+
+.submit-donation-btn {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    color: var(--white);
+    width: 100%;
+    padding: var(--space-4);
+    font-size: var(--text-lg);
+    margin-bottom: var(--space-4);
+}
+
+.submit-donation-btn:hover {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
+    transform: translateY(-2px);
+}
+
+.security-assurance {
+    text-align: center;
+    color: var(--gray-500);
+    font-size: var(--text-sm);
+}
+
+.security-assurance i {
+    color: var(--primary-color);
+    margin-right: var(--space-2);
+}
+
+/* Alternative Methods Section */
+.alternative-methods-section {
+    background: var(--gray-50);
+}
+
+.methods-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-6);
+    margin-top: var(--space-8);
+}
+
+.method-card {
+    background: var(--white);
+    padding: var(--space-8) var(--space-6);
+    border-radius: var(--radius-lg);
+    text-align: center;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--gray-200);
+    transition: var(--transition);
+}
+
+.method-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--secondary-color);
+}
+
+.method-icon {
+    width: 70px;
+    height: 70px;
+    background: var(--light-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--space-4);
+}
+
+.method-icon i {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+}
+
+.method-card h3 {
+    color: var(--primary-color);
+    margin-bottom: var(--space-3);
+    font-size: var(--text-lg);
+}
+
+.method-card p {
+    color: var(--gray-600);
+    line-height: 1.6;
+    margin-bottom: var(--space-4);
+}
+
+.paybill-numbers {
+    background: var(--light-blue);
+    padding: var(--space-5);
+    border-radius: var(--radius);
+    margin-bottom: var(--space-4);
+}
+
+.paybill-item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+    padding: var(--space-3) 0;
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.paybill-item:last-child {
+    border-bottom: none;
+}
+
+.paybill-number {
+    font-size: var(--text-lg);
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.method-features {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    text-align: left;
+}
+
+.method-features li {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    color: var(--gray-600);
+}
+
+.method-features i {
+    color: var(--primary-color);
+}
+
+.mailing-address {
+    background: var(--gray-50);
+    padding: var(--space-4);
+    border-radius: var(--radius);
+    margin-top: var(--space-4);
+    text-align: center;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Give Online */
+@media (max-width: 768px) {
+    .quick-give-grid,
+    .methods-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .payment-tabs {
+        flex-direction: column;
+    }
+    
+    .amount-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .frequency-options {
+        grid-template-columns: 1fr;
+    }
+    
+    .giving-form {
+        padding: var(--space-6);
+    }
+    
+    .form-header {
+        padding: var(--space-6) var(--space-4);
+    }
+}

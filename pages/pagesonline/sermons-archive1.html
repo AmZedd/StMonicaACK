@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sermons - Grace Community Church</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="../css/main.css" as="style">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="../index.html">
+                    <h1>Grace Community Church</h1>
+                    <p>Where faith, hope, and love meet</p>
+                </a>
+            </div>
+            <nav>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="beliefs.html">Our Beliefs</a></li>
+                    <li><a href="staff.html">Our Staff</a></li>
+                    <li><a href="ministries.html">Ministries</a></li>
+                    <li><a href="sermons-archive.html" class="active">Sermons</a></li>
+                    <li><a href="events-calendar.html">Events</a></li>
+                    <li><a href="give-online.html">Give</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+        <div class="mobile-menu-container">
+            <button class="mobile-menu-close" id="mobileMenuClose">
+                <i class="fas fa-times"></i>
+            </button>
+            <ul class="mobile-nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="beliefs.html">Our Beliefs</a></li>
+                <li><a href="staff.html">Our Staff</a></li>
+                <li><a href="ministries.html">Ministries</a></li>
+                <li><a href="sermons-archive.html" class="active">Sermons</a></li>
+                <li><a href="events-calendar.html">Events</a></li>
+                <li><a href="give-online.html">Give</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Sermons</h1>
+            <p>Listen to biblical teaching that transforms lives and strengthens faith</p>
+        </div>
+    </section>
+
+    <!-- Sermon Filters -->
+    <section class="section" style="background: var(--white); padding: 2rem 0; border-bottom: 1px solid var(--gray-200);">
+        <div class="container">
+            <div class="sermon-filters">
+                <div class="filter-group">
+                    <label for="series-filter" class="filter-label">Filter by Series:</label>
+                    <select id="series-filter" class="form-control form-select">
+                        <option value="all">All Series</option>
+                        <option value="foundations">Foundations of Faith</option>
+                        <option value="relationships">Relationships that Matter</option>
+                        <option value="purpose">Finding Your Purpose</option>
+                        <option value="hope">Messages of Hope</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="speaker-filter" class="filter-label">Filter by Speaker:</label>
+                    <select id="speaker-filter" class="form-control form-select">
+                        <option value="all">All Speakers</option>
+                        <option value="john-kamau">Pastor John Kamau</option>
+                        <option value="sarah-mwangi">Pastor Sarah Mwangi</option>
+                        <option value="david-njoroge">Elder David Njoroge</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="date-filter" class="filter-label">Filter by Date:</label>
+                    <select id="date-filter" class="form-control form-select">
+                        <option value="all">All Dates</option>
+                        <option value="2024">2024</option>
+                        <option value="2023">2023</option>
+                        <option value="2022">2022</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Sermon -->
+    <section class="section" style="background: var(--gray-50);">
+        <div class="container">
+            <div class="text-center mb-6">
+                <h2 class="section-title">Featured Message</h2>
+            </div>
+            
+            <div class="featured-sermon">
+                <div class="sermon-player">
+                    <div class="player-header">
+                        <div class="series-badge">Foundations of Faith</div>
+                        <h3>The Power of Faith</h3>
+                        <p class="sermon-meta">Pastor John Kamau • March 10, 2024</p>
+                    </div>
+                    <div class="audio-player">
+                        <div class="player-controls">
+                            <button class="play-btn">
+                                <i class="fas fa-play"></i>
+                            </button>
+                            <div class="progress-bar">
+                                <div class="progress"></div>
+                            </div>
+                            <div class="time">00:00 / 45:30</div>
+                        </div>
+                    </div>
+                    <div class="sermon-actions">
+                        <button class="btn btn-sm"><i class="fas fa-download"></i> Download</button>
+                        <button class="btn btn-sm"><i class="fas fa-share"></i> Share</button>
+                        <button class="btn btn-sm"><i class="fas fa-notes-medical"></i> Notes</button>
+                    </div>
+                </div>
+                <div class="sermon-description">
+                    <h4>About This Message</h4>
+                    <p>
+                        In this powerful message from Hebrews 11, Pastor John explores what it means to live by faith 
+                        in a world filled with uncertainty. Discover how faith transforms our perspective, empowers our 
+                        actions, and connects us with God's promises.
+                    </p>
+                    <div class="sermon-resources">
+                        <h5>Message Resources</h5>
+                        <ul>
+                            <li><a href="#"><i class="fas fa-file-pdf"></i> Sermon Notes (PDF)</a></li>
+                            <li><a href="#"><i class="fas fa-bible"></i> Scripture Reading Guide</a></li>
+                            <li><a href="#"><i class="fas fa-question-circle"></i> Discussion Questions</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sermon Archive -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Sermon Archive</h2>
+                <div class="view-options">
+                    <button class="view-btn active" data-view="grid"><i class="fas fa-th"></i></button>
+                    <button class="view-btn" data-view="list"><i class="fas fa-list"></i></button>
+                </div>
+            </div>
+
+            <div class="sermons-archive grid-view" id="sermonsGrid">
+                <!-- Sermon 1 -->
+                <div class="sermon-item" data-series="foundations" data-speaker="john-kamau" data-date="2024">
+                    <div class="sermon-thumbnail">
+                        <i class="fas fa-play-circle"></i>
+                    </div>
+                    <div class="sermon-info">
+                        <div class="series-tag">Foundations of Faith</div>
+                        <h4>Living in God's Grace</h4>
+                        <p class="sermon-meta">Pastor Sarah Mwangi • March 3, 2024</p>
+                        <p class="sermon-excerpt">
+                            Understanding the depth of God's grace and how it transforms our daily lives...
+                        </p>
+                        <div class="sermon-actions">
+                            <button class="btn btn-sm"><i class="fas fa-play"></i> Listen</button>
+                            <button class="btn btn-sm"><i class="fas fa-download"></i> Download</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sermon 2 -->
+                <div class="sermon-item" data-series="relationships" data-speaker="david-njoroge" data-date="2024">
+                    <div class="sermon-thumbnail">
+                        <i class="fas fa-play-circle"></i>
+                    </div>
+                    <div class="sermon-info">
+                        <div class="series-tag">Relationships that Matter</div>
+                        <h4>Building Community</h4>
+                        <p class="sermon-meta">Elder David Njoroge • February 25, 2024</p>
+                        <p class="sermon-excerpt">
+                            The importance of authentic Christian community in our spiritual growth...
+                        </p>
+                        <div class="sermon-actions">
+                            <button class="btn btn-sm"><i class="fas fa-play"></i> Listen</button>
+                            <button class="btn btn-sm"><i class="fas fa-download"></i> Download</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sermon 3 -->
+                <div class="sermon-item" data-series="purpose" data-speaker="john-kamau" data-date="2024">
+                    <div class="sermon-thumbnail">
+                        <i class="fas fa-play-circle"></i>
+                    </div>
+                    <div class="sermon-info">
+                        <div class="series-tag">Finding Your Purpose</div>
+                        <h4>Called for a Purpose</h4>
+                        <p class="sermon-meta">Pastor John Kamau • February 18, 2024</p>
+                        <p class="sermon-excerpt">
+                            Discovering God's unique calling and purpose for your life...
+                        </p>
+                        <div class="sermon-actions">
+                            <button class="btn btn-sm"><i class="fas fa-play"></i> Listen</button>
+                            <button class="btn btn-sm"><i class="fas fa-download"></i> Download</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sermon 4 -->
+                <div class="sermon-item" data-series="hope" data-speaker="sarah-mwangi" data-date="2024">
+                    <div class="sermon-thumbnail">
+                        <i class="fas fa-play-circle"></i>
+                    </div>
+                    <div class="sermon-info">
+                        <div class="series-tag">Messages of Hope</div>
+                        <h4>Hope in Hard Times</h4>
+                        <p class="sermon-meta">Pastor Sarah Mwangi • February 11, 2024</p>
+                        <p class="sermon-excerpt">
+                            Finding unshakable hope in God's promises during difficult seasons...
+                        </p>
+                        <div class="sermon-actions">
+                            <button class="btn btn-sm"><i class="fas fa-play"></i> Listen</button>
+                            <button class="btn btn-sm"><i class="fas fa-download"></i> Download</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sermon 5 -->
+                <div class="sermon-item" data-series="foundations" data-speaker="john-kamau" data-date="2024">
+                    <div class="sermon-thumbnail">
+                        <i class="fas fa-play-circle"></i>
+                    </div>
+                    <div class="sermon-info">
+                        <div class="series-tag">Foundations of Faith</div>
+                        <h4>The Authority of Scripture</h4>
+                        <p class="sermon-meta">Pastor John Kamau • February 4, 2024</p>
+                        <p class="sermon-excerpt">
+                            Understanding why the Bible is our ultimate authority for faith and practice...
+                        </p>
+                        <div class="sermon-actions">
+                            <button class="btn btn-sm"><i class="fas fa-play"></i> Listen</button>
+                            <button class="btn btn-sm"><i class="fas fa-download"></i> Download</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sermon 6 -->
+                <div class="sermon-item" data-series="relationships" data-speaker="david-njoroge" data-date="2024">
+                    <div class="sermon-thumbnail">
+                        <i class="fas fa-play-circle"></i>
+                    </div>
+                    <div class="sermon-info">
+                        <div class="series-tag">Relationships that Matter</div>
+                        <h4>Forgiveness and Reconciliation</h4>
+                        <p class="sermon-meta">Elder David Njoroge • January 28, 2024</p>
+                        <p class="sermon-excerpt">
+                            The power of forgiveness to heal relationships and restore peace...
+                        </p>
+                        <div class="sermon-actions">
+                            <button class="btn btn-sm"><i class="fas fa-play"></i> Listen</button>
+                            <button class="btn btn-sm"><i class="fas fa-download"></i> Download</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Load More -->
+            <div class="text-center mt-8">
+                <button class="btn btn-outline" id="loadMore">Load More Messages</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sermon Series -->
+    <section class="section" style="background: var(--gray-50);">
+        <div class="container">
+            <h2 class="section-title">Sermon Series</h2>
+            <p class="section-subtitle">Explore complete teaching series for deeper study</p>
+            
+            <div class="series-grid">
+                <div class="series-card">
+                    <div class="series-image" style="background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));">
+                        <i class="fas fa-mountain"></i>
+                    </div>
+                    <div class="series-content">
+                        <h3>Foundations of Faith</h3>
+                        <p>8 messages exploring the core beliefs of Christianity</p>
+                        <div class="series-stats">
+                            <span><i class="fas fa-play-circle"></i> 8 Messages</span>
+                            <span><i class="fas fa-clock"></i> 6 hours</span>
+                        </div>
+                        <a href="#" class="btn btn-outline">Explore Series</a>
+                    </div>
+                </div>
+
+                <div class="series-card">
+                    <div class="series-image" style="background: linear-gradient(135deg, #e74c3c, #c0392b);">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div class="series-content">
+                        <h3>Relationships that Matter</h3>
+                        <p>6 messages on building godly relationships</p>
+                        <div class="series-stats">
+                            <span><i class="fas fa-play-circle"></i> 6 Messages</span>
+                            <span><i class="fas fa-clock"></i> 4.5 hours</span>
+                        </div>
+                        <a href="#" class="btn btn-outline">Explore Series</a>
+                    </div>
+                </div>
+
+                <div class="series-card">
+                    <div class="series-image" style="background: linear-gradient(135deg, #3498db, #2980b9);">
+                        <i class="fas fa-compass"></i>
+                    </div>
+                    <div class="series-content">
+                        <h3>Finding Your Purpose</h3>
+                        <p>5 messages on discovering God's plan for your life</p>
+                        <div class="series-stats">
+                            <span><i class="fas fa-play-circle"></i> 5 Messages</span>
+                            <span><i class="fas fa-clock"></i> 3.5 hours</span>
+                        </div>
+                        <a href="#" class="btn btn-outline">Explore Series</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mobile App CTA -->
+    <section class="section cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Take Sermons With You</h2>
+                <p>Download our church app to listen to messages on the go, take notes, and stay connected with our community.</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn btn-primary"><i class="fab fa-apple"></i> App Store</a>
+                    <a href="#" class="btn btn-primary"><i class="fab fa-google-play"></i> Google Play</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Grace Community Church</h3>
+                    <p>Living out God's love in our community and beyond. Join us as we grow in faith and serve with purpose.</p>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-map-marker-alt"></i> Kenyatta Highway, Thika Town</p>
+                        <p><i class="fas fa-phone"></i> (254) 720-577 944</p>
+                        <p><i class="fas fa-envelope"></i> info@gracechurch.org</p>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="beliefs.html">Our Beliefs</a></li>
+                        <li><a href="staff.html">Our Staff</a></li>
+                        <li><a href="ministries.html">Ministries</a></li>
+                        <li><a href="sermons-archive.html">Sermons</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Service Times</h3>
+                    <ul>
+                        <li>Sunday Main Service: 9:20 AM</li>
+                        <li>Swahili Service: 7:00 AM</li>
+                        <li>Youth Service: 8:20 AM</li>
+                        <li>Gikuyu Service: 11:30 AM</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Connect With Us</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email" required>
+                        <button type="submit" class="btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Grace Community Church. All Rights Reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script src="sermons.js"></script>
+
+    <style>
+        .sermon-filters {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-4);
+            align-items: end;
+        }
+
+        .filter-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .filter-label {
+            font-weight: 600;
+            margin-bottom: var(--space-2);
+            color: var(--gray-700);
+        }
+
+        .featured-sermon {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+        }
+
+        .sermon-player {
+            padding: var(--space-6);
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            color: var(--white);
+        }
+
+        .player-header {
+            margin-bottom: var(--space-4);
+        }
+
+        .series-badge {
+            background: var(--secondary-color);
+            color: var(--gray-900);
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: var(--text-xs);
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: var(--space-2);
+        }
+
+        .sermon-player h3 {
+            color: var(--white);
+            margin-bottom: var(--space-1);
+        }
+
+        .sermon-meta {
+            opacity: 0.9;
+            font-size: var(--text-sm);
+        }
+
+        .audio-player {
+            background: rgba(255, 255, 255, 0.1);
+            padding: var(--space-4);
+            border-radius: var(--radius);
+            margin-bottom: var(--space-4);
+        }
+
+        .player-controls {
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+        }
+
+        .play-btn {
+            background: var(--secondary-color);
+            color: var(--gray-900);
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .play-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .progress-bar {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.3);
+            height: 6px;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .progress {
+            background: var(--secondary-color);
+            height: 100%;
+            width: 30%;
+        }
+
+        .time {
+            font-size: var(--text-sm);
+            opacity: 0.8;
+            min-width: 80px;
+        }
+
+        .sermon-actions {
+            display: flex;
+            gap: var(--space-2);
+            flex-wrap: wrap;
+        }
+
+        .sermon-description {
+            padding: var(--space-6);
+            background: var(--white);
+        }
+
+        .sermon-description h4 {
+            color: var(--primary-color);
+            margin-bottom: var(--space-3);
+        }
+
+        .sermon-resources {
+            margin-top: var(--space-4);
+            padding-top: var(--space-4);
+            border-top: 1px solid var(--gray-200);
+        }
+
+        .sermon-resources h5 {
+            color: var(--primary-color);
+            margin-bottom: var(--space-2);
+        }
+
+        .sermon-resources ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sermon-resources li {
+            margin-bottom: var(--space-2);
+        }
+
+        .sermon-resources a {
+            display: flex;
+            align-items: center;
+            gap: var(--space-2);
+            color: var(--gray-600);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .sermon-resources a:hover {
+            color: var(--primary-color);
+        }
+
+        .sermon-resources i {
+            color: var(--primary-color);
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: var(--space-6);
+        }
+
+        .view-options {
+            display: flex;
+            gap: var(--space-1);
+            background: var(--gray-100);
+            padding: 4px;
+            border-radius: var(--radius);
+        }
+
+        .view-btn {
+            background: none;
+            border: none;
+            padding: 8px 12px;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .view-btn.active {
+            background: var(--white);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .sermons-archive {
+            display: grid;
+            gap: var(--space-6);
+        }
+
+        .grid-view {
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        }
+
+        .list-view {
+            grid-template-columns: 1fr;
+        }
+
+        .sermon-item {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .grid-view .sermon-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .list-view .sermon-item {
+            display: grid;
+            grid-template-columns: 120px 1fr;
+        }
+
+        .sermon-item:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .sermon-thumbnail {
+            height: 120px;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+        }
+
+        .sermon-thumbnail i {
+            font-size: 2rem;
+            opacity: 0.8;
+        }
+
+        .sermon-info {
+            padding: var(--space-4);
+            flex: 1;
+        }
+
+        .series-tag {
+            background: var(--gray-100);
+            color: var(--gray-600);
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: var(--text-xs);
+            font-weight: 500;
+            display: inline-block;
+            margin-bottom: var(--space-2);
+        }
+
+        .sermon-info h4 {
+            color: var(--primary-color);
+            margin-bottom: var(--space-1);
+        }
+
+        .sermon-excerpt {
+            color: var(--gray-600);
+            font-size: var(--text-sm);
+            line-height: 1.5;
+            margin-bottom: var(--space-3);
+        }
+
+        .series-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-6);
+        }
+
+        .series-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .series-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .series-image {
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+        }
+
+        .series-image i {
+            font-size: 3rem;
+            opacity: 0.9;
+        }
+
+        .series-content {
+            padding: var(--space-4);
+        }
+
+        .series-content h3 {
+            color: var(--primary-color);
+            margin-bottom: var(--space-2);
+        }
+
+        .series-stats {
+            display: flex;
+            gap: var(--space-4);
+            margin: var(--space-3) 0;
+            font-size: var(--text-sm);
+            color: var(--gray-600);
+        }
+
+        .series-stats span {
+            display: flex;
+            align-items: center;
+            gap: var(--space-1);
+        }
+
+        @media (max-width: 768px) {
+            .sermon-filters {
+                grid-template-columns: 1fr;
+            }
+            
+            .featured-sermon {
+                grid-template-columns: 1fr;
+            }
+            
+            .grid-view {
+                grid-template-columns: 1fr;
+            }
+            
+            .list-view .sermon-item {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-header {
+                flex-direction: column;
+                gap: var(--space-4);
+                align-items: stretch;
+            }
+        }
+    </style>
+</body>
+</html>

@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Give Online - St Monicas ACK Thika</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="../css/main.css" as="style">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="../index.html">
+                    <h1>St Monicas ACK Thika</h1>
+                    <p>Where faith, hope, and love meet</p>
+                </a>
+            </div>
+            <nav>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="beliefs.html">Our Beliefs</a></li>
+                    <li><a href="staff.html">Our Staff</a></li>
+                    <li><a href="ministries.html">Ministries</a></li>
+                    <li><a href="sermons-archive.html">Sermons</a></li>
+                    <li><a href="events-calendar.html">Events</a></li>
+                    <li><a href="give-online.html" class="active">Give</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+        <div class="mobile-menu-container">
+            <button class="mobile-menu-close" id="mobileMenuClose">
+                <i class="fas fa-times"></i>
+            </button>
+            <ul class="mobile-nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="beliefs.html">Our Beliefs</a></li>
+                <li><a href="staff.html">Our Staff</a></li>
+                <li><a href="ministries.html">Ministries</a></li>
+                <li><a href="sermons-archive.html">Sermons</a></li>
+                <li><a href="events-calendar.html">Events</a></li>
+                <li><a href="give-online.html" class="active">Give</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Give Online</h1>
+            <p>Partner with us in advancing God's kingdom through your generous giving</p>
+        </div>
+    </section>
+
+    <!-- Quick Give Options -->
+    <section class="section quick-give-section">
+        <div class="container">
+            <h2 class="section-title">Quick Give Options</h2>
+            <div class="quick-give-grid">
+                <div class="quick-option">
+                    <div class="option-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>M-Pesa STK Push</h3>
+                    <p>Instant giving with M-Pesa prompt</p>
+                    <button class="btn btn-primary" data-method="mpesa-stk">Give Now</button>
+                </div>
+                
+                <div class="quick-option">
+                    <div class="option-icon">
+                        <i class="fab fa-paypal"></i>
+                    </div>
+                    <h3>PayPal</h3>
+                    <p>Secure international payments</p>
+                    <button class="btn btn-primary" data-method="paypal">Give with PayPal</button>
+                </div>
+                
+                <div class="quick-option">
+                    <div class="option-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <h3>Bank Transfer</h3>
+                    <p>Direct bank transfer details</p>
+                    <button class="btn" data-method="bank">View Bank Details</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Giving Form -->
+    <section class="section giving-form-section">
+        <div class="container">
+            <div class="giving-form-container">
+                <div class="form-header">
+                    <h2>Secure Online Giving</h2>
+                    <p>Your generosity enables us to continue our mission and ministries</p>
+                    <div class="security-badge">
+                        <i class="fas fa-lock"></i>
+                        <span>256-bit SSL Encrypted • PCI Compliant</span>
+                    </div>
+                </div>
+
+                <form class="giving-form" id="givingForm">
+                    <!-- Donation Amount -->
+                    <div class="form-section">
+                        <h3>1. Donation Amount (KES)</h3>
+                        <div class="amount-options">
+                            <div class="amount-grid">
+                                <button type="button" class="amount-option" data-amount="500">KSh 500</button>
+                                <button type="button" class="amount-option" data-amount="1000">KSh 1,000</button>
+                                <button type="button" class="amount-option" data-amount="2000">KSh 2,000</button>
+                                <button type="button" class="amount-option" data-amount="5000">KSh 5,000</button>
+                                <button type="button" class="amount-option" data-amount="10000">KSh 10,000</button>
+                                <button type="button" class="amount-option custom-amount">
+                                    <input type="number" id="custom-amount" placeholder="Other amount" min="100">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Fund Selection -->
+                    <div class="form-section">
+                        <h3>2. Where to Give</h3>
+                        <div class="form-group">
+                            <label for="fund" class="form-label">Select Fund</label>
+                            <select id="fund" name="fund" class="form-control form-select" required>
+                                <option value="general">General Fund - Main Church</option>
+                                <option value="mothers-union">Mothers Union</option>
+                                <option value="missions">Missions & Outreach</option>
+                                <option value="building">Building Fund</option>
+                                <option value="benevolence">Benevolence Fund</option>
+                                <option value="youth">Youth Ministry</option>
+                                <option value="children">Children's Ministry</option>
+                                <option value="worship">Worship & Arts</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Payment Method -->
+                    <div class="form-section">
+                        <h3>3. Payment Method</h3>
+                        <div class="payment-tabs">
+                            <button type="button" class="payment-tab active" data-tab="mpesa">
+                                <i class="fas fa-mobile-alt"></i>
+                                M-Pesa STK Push
+                            </button>
+                            <button type="button" class="payment-tab" data-tab="paypal">
+                                <i class="fab fa-paypal"></i>
+                                PayPal
+                            </button>
+                            <button type="button" class="payment-tab" data-tab="manual">
+                                <i class="fas fa-university"></i>
+                                Manual Payment
+                            </button>
+                        </div>
+
+                        <!-- M-Pesa STK Push -->
+                        <div class="payment-content active" id="mpesaContent">
+                            <div class="mpesa-instructions">
+                                <div class="instruction-step">
+                                    <span class="step-number">1</span>
+                                    <p>Enter your M-Pesa registered phone number</p>
+                                </div>
+                                <div class="instruction-step">
+                                    <span class="step-number">2</span>
+                                    <p>You will receive an STK push on your phone</p>
+                                </div>
+                                <div class="instruction-step">
+                                    <span class="step-number">3</span>
+                                    <p>Enter your M-Pesa PIN to complete payment</p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="mpesa-phone" class="form-label">M-Pesa Phone Number</label>
+                                <input type="tel" id="mpesa-phone" name="mpesa-phone" class="form-control" placeholder="07XX XXX XXX" pattern="[0-9]{10}" required>
+                            </div>
+                            <div class="paybill-info">
+                                <h4>PayBill Numbers:</h4>
+                                <div class="paybill-item">
+                                    <strong>Main Church:</strong> 123456
+                                </div>
+                                <div class="paybill-item">
+                                    <strong>Mothers Union:</strong> 123456
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- PayPal Payment -->
+                        <div class="payment-content" id="paypalContent">
+                            <div class="paypal-info">
+                                <i class="fab fa-paypal"></i>
+                                <p>You will be redirected to PayPal to complete your secure payment.</p>
+                                <p class="exchange-note">Amount will be converted to USD at current exchange rates.</p>
+                            </div>
+                        </div>
+
+                        <!-- Manual Payment Instructions -->
+                        <div class="payment-content" id="manualContent">
+                            <div class="manual-payment-info">
+                                <h4>Bank Transfer Details</h4>
+                                
+                                <div class="bank-account">
+                                    <h5>Account 1 - Main Church Account</h5>
+                                    <div class="bank-details">
+                                        <div class="detail-item">
+                                            <i class="fas fa-university"></i>
+                                            <span><strong>Bank:</strong> Equity Bank Kenya Ltd</span>
+                                        </div>
+                                        <div class="detail-item">
+                                            <i class="fas fa-building"></i>
+                                            <span><strong>Branch:</strong> Thika Main Branch</span>
+                                        </div>
+                                        <div class="detail-item">
+                                            <i class="fas fa-signature"></i>
+                                            <span><strong>Account Name:</strong> St Monicas ACK Thika</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="bank-account">
+                                    <h5>Account 2 - Building Fund</h5>
+                                    <div class="bank-details">
+                                        <div class="detail-item">
+                                            <i class="fas fa-university"></i>
+                                            <span><strong>Bank:</strong> KCB Bank Kenya Ltd</span>
+                                        </div>
+                                        <div class="detail-item">
+                                            <i class="fas fa-building"></i>
+                                            <span><strong>Branch:</strong> Thika Town Branch</span>
+                                        </div>
+                                        <div class="detail-item">
+                                            <i class="fas fa-signature"></i>
+                                            <span><strong>Account Name:</strong> St Monicas ACK Thika Building Fund</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="bank-account">
+                                    <h5>Account 3 - Missions Fund</h5>
+                                    <div class="bank-details">
+                                        <div class="detail-item">
+                                            <i class="fas fa-university"></i>
+                                            <span><strong>Bank:</strong> Cooperative Bank of Kenya</span>
+                                        </div>
+                                        <div class="detail-item">
+                                            <i class="fas fa-building"></i>
+                                            <span><strong>Branch:</strong> Thika Branch</span>
+                                        </div>
+                                        <div class="detail-item">
+                                            <i class="fas fa-signature"></i>
+                                            <span><strong>Account Name:</strong> St Monicas ACK Thika Missions</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="security-note">
+                                    <i class="fas fa-shield-alt"></i>
+                                    <span>For complete account numbers, please contact our finance office</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Donor Information -->
+                    <div class="form-section">
+                        <h3>4. Your Information</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="donor-name" class="form-label">Full Name *</label>
+                                <input type="text" id="donor-name" name="donor-name" class="form-control" required placeholder="Your full name">
+                            </div>
+                            <div class="form-group">
+                                <label for="donor-email" class="form-label">Email Address *</label>
+                                <input type="email" id="donor-email" name="donor-email" class="form-control" required placeholder="your.email@example.com">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="donor-notes" class="form-label">Additional Notes (Optional)</label>
+                            <textarea id="donor-notes" name="donor-notes" class="form-control form-textarea" rows="3" placeholder="Any special instructions or dedication..."></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Summary and Submit -->
+                    <div class="form-section summary-section">
+                        <div class="donation-summary">
+                            <h3>Donation Summary</h3>
+                            <div class="summary-items">
+                                <div class="summary-item">
+                                    <span>Amount:</span>
+                                    <span id="summary-amount">KSh 0</span>
+                                </div>
+                                <div class="summary-item">
+                                    <span>Fund:</span>
+                                    <span id="summary-fund">General Fund</span>
+                                </div>
+                                <div class="summary-item">
+                                    <span>Method:</span>
+                                    <span id="summary-method">M-Pesa STK Push</span>
+                                </div>
+                                <div class="summary-total">
+                                    <span>Total:</span>
+                                    <span id="summary-total">KSh 0</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-options">
+                            <label class="checkbox-option">
+                                <input type="checkbox" id="cover-fees" name="cover-fees">
+                                <span class="checkmark"></span>
+                                I'd like to cover the processing fees so 100% of my donation goes to the church
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" id="anonymous" name="anonymous">
+                                <span class="checkmark"></span>
+                                Give anonymously
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" id="newsletter" name="newsletter" checked>
+                                <span class="checkmark"></span>
+                                Receive giving statements and ministry updates
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary submit-donation-btn">
+                            <i class="fas fa-lock"></i>
+                            Complete Secure Donation
+                        </button>
+
+                        <div class="security-assurance">
+                            <p><i class="fas fa-shield-alt"></i> Your information is secure and encrypted. We never store your payment details.</p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Alternative Giving Methods -->
+    <section class="section alternative-methods-section">
+        <div class="container">
+            <h2 class="section-title">Alternative Giving Methods</h2>
+            <div class="methods-grid">
+                <div class="method-card">
+                    <div class="method-icon">
+                        <i class="fas fa-sms"></i>
+                    </div>
+                    <h3>M-Pesa PayBill</h3>
+                    <div class="paybill-numbers">
+                        <div class="paybill-item">
+                            <strong>Main Church:</strong>
+                            <span class="paybill-number">123456</span>
+                            <small>Account: GIVE</small>
+                        </div>
+                        <div class="paybill-item">
+                            <strong>Mothers Union:</strong>
+                            <span class="paybill-number">123456</span>
+                            <small>Account: MOTHERS</small>
+                        </div>
+                    </div>
+                    <p>Use Lipa Na M-Pesa → PayBill</p>
+                </div>
+
+                <div class="method-card">
+                    <div class="method-icon">
+                        <i class="fas fa-hand-holding-usd"></i>
+                    </div>
+                    <h3>In-Person Giving</h3>
+                    <p>Give during our Sunday services or visit our church office during working hours.</p>
+                    <ul class="method-features">
+                        <li><i class="fas fa-check"></i> Cash donations</li>
+                        <li><i class="fas fa-check"></i> Check payments</li>
+                        <li><i class="fas fa-check"></i> Direct M-Pesa</li>
+                    </ul>
+                </div>
+
+                <div class="method-card">
+                    <div class="method-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Mail a Check</h3>
+                    <p>Send checks payable to:</p>
+                    <div class="mailing-address">
+                        <strong>St Monicas ACK Thika</strong><br>
+                        P.O. Box 123-456<br>
+                        Thika, Kenya
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>St Monicas ACK Thika</h3>
+                    <p>Living out God's love in our community and beyond. Join us as we grow in faith and serve with purpose.</p>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-map-marker-alt"></i> Kenyatta Highway, Thika Town</p>
+                        <p><i class="fas fa-phone"></i> (254) 720-577 944</p>
+                        <p><i class="fas fa-envelope"></i> info@stmonicasackthika</p>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="beliefs.html">Our Beliefs</a></li>
+                        <li><a href="staff.html">Our Staff</a></li>
+                        <li><a href="ministries.html">Ministries</a></li>
+                        <li><a href="sermons-archive.html">Sermons</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Service Times</h3>
+                    <ul>
+                        <li>Sunday Main Service: 9:20 AM</li>
+                        <li>Swahili Service: 7:00 AM</li>
+                        <li>Youth Service: 8:20 AM</li>
+                        <li>Gikuyu Service: 11:30 AM</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Connect With Us</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email" required>
+                        <button type="submit" class="btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 St Monicas ACK Thika. All Rights Reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script src="give-online.js"></script>
+</body>
+</html>

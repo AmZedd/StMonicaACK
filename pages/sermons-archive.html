@@ -1,0 +1,2008 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sermons Archive - St Monicas ACK Thika</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="../index.html">
+                    <h1>St Monicas ACK Thika</h1>
+                    <p>Where faith, hope, and love meet</p>
+                </a>
+            </div>
+            <nav>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="beliefs.html">Our Beliefs</a></li>
+                    <li><a href="staff.html">Our Staff</a></li>
+                    <li><a href="ministries.html">Ministries</a></li>
+                    <li><a href="sermons-archive.html" class="active">Sermons</a></li>
+                    <li><a href="events-calendar.html">Events</a></li>
+                    <li><a href="give-online.html">Give</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+        <div class="mobile-menu-container">
+            <button class="mobile-menu-close" id="mobileMenuClose">
+                <i class="fas fa-times"></i>
+            </button>
+            <ul class="mobile-nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="beliefs.html">Our Beliefs</a></li>
+                <li><a href="staff.html">Our Staff</a></li>
+                <li><a href="ministries.html">Ministries</a></li>
+                <li><a href="sermons-archive.html" class="active">Sermons</a></li>
+                <li><a href="events-calendar.html">Events</a></li>
+                <li><a href="give-online.html">Give</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Sermons Archive</h1>
+            <p>Explore our library of messages and grow in your faith journey</p>
+        </div>
+    </section>
+
+    <!-- Featured Sermons Section -->
+    <section class="section featured-sermons-section">
+        <div class="container">
+            <h2 class="section-title">Recent Featured Sermons</h2>
+            <div class="featured-sermons-grid" id="featuredSermons">
+                <!-- Featured sermons will be dynamically generated -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Filters Section -->
+    <section class="section filters-section">
+        <div class="container">
+            <div class="filters-container">
+                <h2>Filter Sermons</h2>
+                <div class="filters-grid">
+                    <!-- Year Filter -->
+                    <div class="filter-group">
+                        <label for="year-filter">Year</label>
+                        <select id="year-filter" class="filter-select">
+                            <option value="all">All Years</option>
+                            <option value="2025" selected>2025</option>
+                            <option value="2024">2024</option>
+                        </select>
+                    </div>
+
+                    <!-- Month Filter -->
+                    <div class="filter-group">
+                        <label for="month-filter">Month</label>
+                        <select id="month-filter" class="filter-select">
+                            <option value="all">All Months</option>
+                            <option value="1">January</option>
+                            <option value="2">February</option>
+                            <option value="3">March</option>
+                            <option value="4">April</option>
+                            <option value="5">May</option>
+                            <option value="6">June</option>
+                            <option value="7">July</option>
+                            <option value="8">August</option>
+                            <option value="9">September</option>
+                            <option value="10">October</option>
+                            <option value="11">November</option>
+                            <option value="12">December</option>
+                        </select>
+                    </div>
+
+                    <!-- Service Filter -->
+                    <div class="filter-group">
+                        <label for="service-filter">Service</label>
+                        <select id="service-filter" class="filter-select">
+                            <option value="all">All Services</option>
+                            <option value="swahili">Swahili Service</option>
+                            <option value="youth">Youth Service</option>
+                            <option value="main">Main Service</option>
+                            <option value="gikuyu">Gikuyu Service</option>
+                        </select>
+                    </div>
+
+                    <!-- Monthly Theme Filter -->
+                    <div class="filter-group">
+                        <label for="theme-filter">Monthly Theme</label>
+                        <select id="theme-filter" class="filter-select">
+                            <option value="all">All Themes</option>
+                            <option value="joyful-beginnings">A Joyful New Beginning</option>
+                            <option value="prayer">Prayer</option>
+                            <option value="spiritual-growth">Spiritual Growth</option>
+                            <option value="power-cross">Power of The Cross</option>
+                            <option value="gifts-talents">Nurturing Gifts & Talents</option>
+                            <option value="holy-spirit">Ministry of the Holy Spirit</option>
+                            <option value="compassion">Ministry of Compassion</option>
+                            <option value="community-impact">Community Impact</option>
+                            <option value="spiritual-warfare">Spiritual Warfare</option>
+                            <option value="worship">Worship</option>
+                            <option value="leadership">Leadership & Development</option>
+                            <option value="family">Celebrating The Family</option>
+                        </select>
+                    </div>
+
+                    <!-- Speaker Filter -->
+                    <div class="filter-group">
+                        <label for="speaker-filter">Speaker</label>
+                        <select id="speaker-filter" class="filter-select">
+                            <option value="all">All Speakers</option>
+                            <option value="canon-joseph">Canon Venarable Joseph</option>
+                            <option value="bishop-tom">Bishop Tom Plymouth</option>
+                            <option value="elias-muikia">Canon Elias Muikia</option>
+                            <option value="alice-gachinju">Rev. Alice Gachinju</option>
+                            <option value="evans-ndirangu">Lay Reader Evans Ndirangu</option>
+                            <option value="laban-muchiri">Lay Reader Laban Muchiri</option>
+                            <option value="guest">Guest Speaker</option>
+                        </select>
+                    </div>
+
+                    <!-- Reset Filters -->
+                    <div class="filter-group">
+                        <label>&nbsp;</label>
+                        <button id="reset-filters" class="btn btn-secondary">Reset Filters</button>
+                    </div>
+                </div>
+
+                <!-- Active Filters Display -->
+                <div class="active-filters" id="activeFilters">
+                    <!-- Active filters will appear here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sermons Grid -->
+    <section class="section sermons-archive-section">
+        <div class="container">
+            <div class="sermons-stats">
+                <p id="sermons-count">Showing all sermons</p>
+            </div>
+
+            <div class="sermons-archive-grid" id="sermonsGrid">
+                <!-- Sermon cards will be dynamically generated -->
+            </div>
+
+            <!-- Load More Button -->
+            <div class="load-more-container">
+                <button id="load-more" class="btn btn-primary">Load More Sermons</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Monthly Themes Section -->
+    <section class="section themes-section">
+        <div class="container">
+            <h2 class="section-title">2025 Monthly Themes</h2>
+            <div class="themes-grid">
+                <div class="theme-card">
+                    <div class="theme-month">January</div>
+                    <h3>A Joyful New Beginning</h3>
+                    <p>Starting the year with renewed hope and purpose in Christ.</p>
+                    <div class="theme-sermons">
+                        <span>4 sermons per Sunday</span>
+                    </div>
+                </div>
+
+                <div class="theme-card">
+                    <div class="theme-month">February</div>
+                    <h3>Prayer</h3>
+                    <p>Deepening our communication with God through powerful prayer.</p>
+                    <div class="theme-sermons">
+                        <span>4 sermons per Sunday</span>
+                    </div>
+                </div>
+
+                <div class="theme-card">
+                    <div class="theme-month">March</div>
+                    <h3>Spiritual Growth</h3>
+                    <p>Maturing in faith and developing a deeper relationship with God.</p>
+                    <div class="theme-sermons">
+                        <span>4 sermons per Sunday</span>
+                    </div>
+                </div>
+
+                <div class="theme-card">
+                    <div class="theme-month">April</div>
+                    <h3>Power of The Cross</h3>
+                    <p>Understanding the significance and victory of Christ's sacrifice.</p>
+                    <div class="theme-sermons">
+                        <span>4 sermons per Sunday</span>
+                    </div>
+                </div>
+
+                <div class="theme-card">
+                    <div class="theme-month">May</div>
+                    <h3>Nurturing Gifts & Talents</h3>
+                    <p>Discovering and developing God-given abilities for service.</p>
+                    <div class="theme-sermons">
+                        <span>4 sermons per Sunday</span>
+                    </div>
+                </div>
+
+                <div class="theme-card">
+                    <div class="theme-month">June</div>
+                    <h3>Ministry of the Holy Spirit</h3>
+                    <p>Experiencing the guidance and power of the Holy Spirit.</p>
+                    <div class="theme-sermons">
+                        <span>4 sermons per Sunday</span>
+                    </div>
+                </div>
+
+                <div class="theme-card">
+                    <div class="theme-month">July</div>
+                    <h3>Ministry of Compassion</h3>
+                    <p>Extending God's love through acts of kindness and service.</p>
+                    <div class="theme-sermons">
+                        <span>4 sermons per Sunday</span>
+                    </div>
+                </div>
+
+                <div class="theme-card">
+                    <div class="theme-month">August</div>
+                    <h3>Community Impact</h3>
+                    <p>Making a difference in our communities through Christ's love.</p>
+                    <div class="theme-sermons">
+                        <span>4 sermons per Sunday</span>
+                    </div>
+                </div>
+
+                <div class="theme-card">
+                    <div class="theme-month">September</div>
+                    <h3>Spiritual Warfare</h3>
+                    <p>Equipping believers to stand firm against spiritual battles.</p>
+                    <div class="theme-sermons">
+                        <span>4 sermons per Sunday</span>
+                    </div>
+                </div>
+
+                <div class="theme-card">
+                    <div class="theme-month">October</div>
+                    <h3>Worship</h3>
+                    <p>Developing a lifestyle of authentic worship and praise.</p>
+                    <div class="theme-sermons">
+                        <span>4 sermons per Sunday</span>
+                    </div>
+                </div>
+
+                <div class="theme-card">
+                    <div class="theme-month">November</div>
+                    <h3>Leadership & Development</h3>
+                    <p>Raising godly leaders for church and community transformation.</p>
+                    <div class="theme-sermons">
+                        <span>4 sermons per Sunday</span>
+                    </div>
+                </div>
+
+                <div class="theme-card">
+                    <div class="theme-month">December</div>
+                    <h3>Celebrating The Family</h3>
+                    <p>Strengthening family relationships through biblical principles.</p>
+                    <div class="theme-sermons">
+                        <span>4 sermons per Sunday</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>St Monicas ACK Thika</h3>
+                    <p>Living out God's love in our community and beyond. Join us as we grow in faith and serve with purpose.</p>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-map-marker-alt"></i> Kenyatta Highway, Thika Town</p>
+                        <p><i class="fas fa-phone"></i> (254) 720-577 944</p>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="beliefs.html">Our Beliefs</a></li>
+                        <li><a href="staff.html">Our Staff</a></li>
+                        <li><a href="ministries.html">Ministries</a></li>
+                        <li><a href="sermons-archive.html">Sermons</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Service Times</h3>
+                    <ul>
+                        <li>Sunday Main Service: 9:20 AM</li>
+                        <li>Swahili Service: 7:00 AM</li>
+                        <li>Youth Service: 8:20 AM</li>
+                        <li>Gikuyu Service: 11:30 AM</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Connect With Us</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email" required>
+                        <button type="submit" class="btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 St Monicas ACK Thika. All Rights Reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script>
+        // Sermons Data for 2025
+        const sermonsData = [
+            // January - A Joyful New Beginning
+            {
+                id: 1,
+                title: "Starting Fresh with God",
+                date: "2025-01-05",
+                speaker: "canon-joseph",
+                service: "swahili",
+                monthlyTheme: "joyful-beginnings",
+                sundayTheme: "New Year, New Mercies",
+                biblePassage: "Lamentations 3:22-23",
+                audioUrl: "https://drive.google.com/placeholder-swahili-1",
+                videoUrl: "https://youtube.com/placeholder-swahili-1",
+                image: "https://scontent-mba2-1.xx.fbcdn.net/v/t39.30808-6/494754985_711157691263782_6621035427802355110_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHzSPPQO575D7uakVS2wUKkj0RQV1rDYcCPRFBXWsNhwAnMrtvATXH9xlMQSQK3nxkXfjyYxSARmZxcvTqKqSjE&_nc_ohc=PSfJByL-Y9oQ7kNvwFo53Ew&_nc_oc=AdlOJShLrzhsfCKR1Qj4pGSt7cbjH0BKKS7VscMRUQZBlQMALVHSqxuyra9UvJMwWh8&_nc_zt=23&_nc_ht=scontent-mba2-1.xx&_nc_gid=yjcxj6hXB6SDiQMIHzXudw&oh=00_AffnL0gQyBNXjhJeEh8GhBASKa_KtmSz57gsMcUx1wMQrg&oe=69091556",
+                description: "Beginning the new year with God's fresh mercies and renewed purpose.",
+                isFeatured: false
+            },
+            {
+                id: 2,
+                title: "Youth: New Beginnings in Christ",
+                date: "2025-01-05",
+                speaker: "alice-gachinju",
+                service: "youth",
+                monthlyTheme: "joyful-beginnings",
+                sundayTheme: "Identity in Christ",
+                biblePassage: "2 Corinthians 5:17",
+                audioUrl: "https://drive.google.com/placeholder-youth-1",
+                videoUrl: "https://youtube.com/placeholder-youth-1",
+                image: "https://scontent-mba2-1.xx.fbcdn.net/v/t39.30808-6/518004817_761928489520035_3888894353241639859_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeEUnuWMyNsTjOhk-d2Rh2_q5lOL6ye7brnmU4vrJ7tuuR5s2M0p7DP7ylICQMEy9ThNtMRm9cujkTHCXbVPJbVo&_nc_ohc=TqNwYoAt0Y0Q7kNvwFUIC0l&_nc_oc=AdlxhN44ixaVgb7PflDen73q3O6-CkPzWx5OFHMIPqiUHuTvly5SAoTxav7alELmndo&_nc_zt=23&_nc_ht=scontent-mba2-1.xx&_nc_gid=uPrXi6JatWjB4GnSKtjRiQ&oh=00_Afchl2nPCbQXyYbIxfmrsSuFiFyF3bugUCMSux2CvwRjFg&oe=69091BAF",
+                description: "Discovering our true identity as new creations in Christ.",
+                isFeatured: false
+            },
+            {
+                id: 3,
+                title: "A Fresh Start with God",
+                date: "2025-01-05",
+                speaker: "alice-gachinju",
+                service: "main",
+                monthlyTheme: "joyful-beginnings",
+                sundayTheme: "New Beginnings",
+                biblePassage: "Isaiah 43:18-19",
+                audioUrl: "https://drive.google.com/placeholder-main-1",
+                videoUrl: "https://youtube.com/placeholder-main-1",
+                image: "https://scontent-mba2-1.xx.fbcdn.net/v/t39.30808-6/518004817_761928489520035_3888894353241639859_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeEUnuWMyNsTjOhk-d2Rh2_q5lOL6ye7brnmU4vrJ7tuuR5s2M0p7DP7ylICQMEy9ThNtMRm9cujkTHCXbVPJbVo&_nc_ohc=TqNwYoAt0Y0Q7kNvwFUIC0l&_nc_oc=AdlxhN44ixaVgb7PflDen73q3O6-CkPzWx5OFHMIPqiUHuTvly5SAoTxav7alELmndo&_nc_zt=23&_nc_ht=scontent-mba2-1.xx&_nc_gid=uPrXi6JatWjB4GnSKtjRiQ&oh=00_Afchl2nPCbQXyYbIxfmrsSuFiFyF3bugUCMSux2CvwRjFg&oe=69091BAF",
+                description: "Embracing God's promise of new beginnings and fresh starts.",
+                isFeatured: false
+            },
+          
+            {
+                id: 7,
+                title: "Moving Forward in Faith",
+                date: "2025-01-12",
+                speaker: "canon-joseph",
+                service: "main",
+                monthlyTheme: "joyful-beginnings",
+                sundayTheme: "Progress in Christ",
+                biblePassage: "Philippians 1:6",
+                audioUrl: "https://drive.google.com/placeholder-main-2",
+                videoUrl: "https://youtube.com/placeholder-main-2",
+                image: "https://scontent-mba2-1.xx.fbcdn.net/v/t39.30808-6/557983159_831701679209382_2571580877984622149_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeFGduHFqXeDfErkooXz_3M2ax0r3iKbahJrHSveIptqEosVsPqZNFPVLRpc88gqbWScaU1rFzjwV-VkyLgz3Ns0&_nc_ohc=s6u7PCWePNYQ7kNvwEau4XS&_nc_oc=AdmcjIq5XfPeN8bRNNf7DmjbXtQur0EZJS_ygrf5z516FQxqEpeLHKPHRYLD-OctWmU&_nc_zt=23&_nc_ht=scontent-mba2-1.xx&_nc_gid=V4W_GooKuGF5yfUXvHSHDg&oh=00_AfdR6o8SpnmugeDwNFBRdcIlL4pMWa3_RS6B7BtEZdHR6w&oe=690920FF",
+                description: "Trusting God's work of completion in our lives.",
+                isFeatured: false
+            },
+            {
+                id: 8,
+                title: "Kiambiriria Kia Gikeno",
+                date: "2025-01-12",
+                speaker: "laban-muchiri",
+                service: "gikuyu",
+                monthlyTheme: "joyful-beginnings",
+                sundayTheme: "Kiambiriria Kia Gikeno",
+                biblePassage: "Mariko 6:9",
+                audioUrl: "https://drive.google.com/placeholder-gikuyu-2",
+                videoUrl: "https://youtube.com/placeholder-gikuyu-2",
+                image: "https://scontent-mba2-1.xx.fbcdn.net/v/t39.30808-6/565923991_839408061772077_362375299272724669_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeEMyPjjzQXFqb90gHpvBBcZxsrHtNnZMTXGyse02dkxNTbwbMyy63imfpObFOI3BC56iVxXirRXd450SL8-pl5f&_nc_ohc=PoFWdn7hjqEQ7kNvwH4Qcd5&_nc_oc=Adml7wzkk7xsAStAmrwr26HEC_rOuTHpmNEegEm2tqW1spN_7xF-5u3m0rRH0PzVgMM&_nc_zt=23&_nc_ht=scontent-mba2-1.xx&_nc_gid=6sSd6bbQkHmap9aDzg3J3g&oh=00_AfdPx9vJSr0hiDJgmLecBMD_aUR_zo4Og8Me6ZGLKEiwiA&oe=6908EB5B",
+                description: "Gukuya na gutherera Mwathani muugi wa thingira.",
+                isFeatured: true
+            },
+
+            // Continue with more dates... Add January 19th, 26th, then February, etc.
+            // For now, let's add a few more to demonstrate the pattern
+
+            // February - Prayer
+            {
+                id: 9,
+                title: "The Power of Persistent Prayer",
+                date: "2025-02-02",
+                speaker: "canon-joseph",
+                service: "swahili",
+                monthlyTheme: "prayer",
+                sundayTheme: "Prayer That Prevails",
+                biblePassage: "Luke 18:1-8",
+                audioUrl: "https://drive.google.com/placeholder-swahili-3",
+                videoUrl: "https://youtube.com/placeholder-swahili-3",
+                image: "https://scontent-mba2-1.xx.fbcdn.net/v/t39.30808-6/557983159_831701679209382_2571580877984622149_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeFGduHFqXeDfErkooXz_3M2ax0r3iKbahJrHSveIptqEosVsPqZNFPVLRpc88gqbWScaU1rFzjwV-VkyLgz3Ns0&_nc_ohc=s6u7PCWePNYQ7kNvwEau4XS&_nc_oc=AdmcjIq5XfPeN8bRNNf7DmjbXtQur0EZJS_ygrf5z516FQxqEpeLHKPHRYLD-OctWmU&_nc_zt=23&_nc_ht=scontent-mba2-1.xx&_nc_gid=V4W_GooKuGF5yfUXvHSHDg&oh=00_AfdR6o8SpnmugeDwNFBRdcIlL4pMWa3_RS6B7BtEZdHR6w&oe=690920FF",
+                description: "Understanding the importance of persistent prayer in our walk with God.",
+                isFeatured: true
+            },
+            
+            {
+                id: 63,
+                title: "Youth: Breaking Old Habits",
+                date: "2025-04-20",
+                speaker: "elias-muikia",
+                service: "main",
+                monthlyTheme: "joyful-beginnings",
+                sundayTheme: "Family Easter Sunday",
+                biblePassage: "Romans 12:1-2",
+                audioUrl: "https://drive.google.com/placeholder-youth-2",
+                videoUrl: "https://youtube.com/placeholder-youth-2",
+                image: "https://scontent-mba2-1.xx.fbcdn.net/v/t39.30808-6/490118191_700799208966297_8013038282734866357_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHrj4H3GXdWnpeO6GGgZzac_V8XwJC8__39XxfAkLz__bTpAOt6snlYjFZHsgWhOSzGIBQnVANKWiNrr2A3_wn3&_nc_ohc=8RQXo1d-cScQ7kNvwHy9Jv4&_nc_oc=AdkV3hnl8LjbX3lyOrC-ujhT5c-S097kSdOzyL-vktoMLjF-IIqJKh4BiLYlMn8zLMA&_nc_zt=23&_nc_ht=scontent-mba2-1.xx&_nc_gid=rKa-bh6vVVbhKpTRcrNZ1Q&oh=00_Afde3cPQqaSKQ697fC8m8cVW--eVqYIcMQC8VcN_UhM_Lw&oe=69091E48",
+                description: "Overcoming negative patterns through Christ's transforming power.",
+                isFeatured: true
+            },
+            {
+                id: 79,
+                title: "Letting Go of the Past",
+                date: "2025-05-18",
+                speaker: "bishop-tom",
+                service: "main",
+                monthlyTheme: "Nurturing Gifts & Talents",
+                sundayTheme: "Forward in Faith",
+                biblePassage: "Philippians 3:13-14",
+                audioUrl: "https://drive.google.com/placeholder-swahili-2",
+                videoUrl: "https://youtube.com/placeholder-swahili-2",
+                image: "https://scontent-mba2-1.xx.fbcdn.net/v/t39.30808-6/499774573_720674833645401_8819414196117083238_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeGRjH4TAKMoe6ZuKPdEE9zAqDg30c5_gH2oODfRzn-AfQuHD5NVc4S0PLZkDX7tl1VnxELaCHoCL46ycysC7rYG&_nc_ohc=XRqM-hJxcnoQ7kNvwE_qZUv&_nc_oc=AdlrHyN-Pf_QDo3q3cC_KLt5euvfAlTR5lPFQc3itj0v1eU_zzmitDHTQzGZCpu7yjs&_nc_zt=23&_nc_ht=scontent-mba2-1.xx&_nc_gid=pYi-gRWVXeubb-QN6vaQlw&oh=00_AfcqLKPL2QJbV-IB_OI6ThGEYlv4PwiWqtRD5Wa2KM0dhQ&oe=69092138",
+                description: "Learning to release past hurts and move forward in God's grace.",
+                isFeatured: true
+            },
+            // Continue with October 5th
+            {
+                id: 157,
+                title: "Letting Go of the Past",
+                date: "2025-10-05",
+                speaker: "alice-gachinju",
+                service: "swahili",
+                monthlyTheme: "worship",
+                sundayTheme: "Forward in Faith",
+                biblePassage: "Philippians 3:13-14",
+                audioUrl: "https://drive.google.com/placeholder-swahili-2",
+                videoUrl: "https://youtube.com/placeholder-swahili-2",
+                image: "https://scontent-mba2-1.xx.fbcdn.net/v/t39.30808-6/555625760_822855876760629_3388041638753839588_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeF0X7nB5pXddqQxWrHChGAAZqjhR4oACl5mqOFHigAKXnYb4E_OpE7oyNVBSdkeZWwyDc799Giv3rTmIp2CeGlw&_nc_ohc=ldwhzJMMhv4Q7kNvwHOXFS1&_nc_oc=AdmB6RX26GZ-zlfnu0gbZtIv4RSrHi4L63MLOb8u0d8gBEcxyTy1DK-rmMmD2BlMnfQ&_nc_zt=23&_nc_ht=scontent-mba2-1.xx&_nc_gid=QgdoH_hHvOUZdDTNfvVf8A&oh=00_Aff1LDLEOEsQcE3IRS4A5V92K7F2LToWxs-eVXF6BF8dBA&oe=6909159A",
+                description: "Learning to release past hurts and move forward in God's grace.",
+                isFeatured: true
+            },
+// Continue with October 5th
+            {
+                id: 158,
+                title: "Letting Go of the Past",
+                date: "2025-10-05",
+                speaker: "alice-gachinju",
+                service: "youth",
+                monthlyTheme: "worship",
+                sundayTheme: "Forward in Faith",
+                biblePassage: "Philippians 3:13-14",
+                audioUrl: "https://drive.google.com/drive/u/0/my-drive?q=type:audio%20parent:0APPsnyvOqZYRUk9PVA",
+                videoUrl: "https://www.youtube.com/watch?v=t_XpMWoNkos&t=7s&pp=ygUXYWNrIHN0IG1vbmljYSBtdWd1bW9pbmk%3D",
+                image: "https://scontent-mba2-1.xx.fbcdn.net/v/t39.30808-6/555625760_822855876760629_3388041638753839588_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeF0X7nB5pXddqQxWrHChGAAZqjhR4oACl5mqOFHigAKXnYb4E_OpE7oyNVBSdkeZWwyDc799Giv3rTmIp2CeGlw&_nc_ohc=ldwhzJMMhv4Q7kNvwHOXFS1&_nc_oc=AdmB6RX26GZ-zlfnu0gbZtIv4RSrHi4L63MLOb8u0d8gBEcxyTy1DK-rmMmD2BlMnfQ&_nc_zt=23&_nc_ht=scontent-mba2-1.xx&_nc_gid=QgdoH_hHvOUZdDTNfvVf8A&oh=00_Aff1LDLEOEsQcE3IRS4A5V92K7F2LToWxs-eVXF6BF8dBA&oe=6909159A",
+                description: "Learning to release past hurts and move forward in God's grace.",
+                isFeatured: true
+            },
+            {
+                id: 159,
+                title: "Letting Go of the Past",
+                date: "2025-10-05",
+                speaker: "alice-gachinju",
+                service: "main",
+                monthlyTheme: "worship",
+                sundayTheme: "Forward in Faith",
+                biblePassage: "Philippians 3:13-14",
+                audioUrl: "https://drive.google.com/placeholder-swahili-2",
+                videoUrl: "https://youtube.com/placeholder-swahili-2",
+                image: "https://scontent-mba2-1.xx.fbcdn.net/v/t39.30808-6/502646590_737488925297325_5423938810502868607_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeE_HXIUZTDL61oUzJacmtSNxSEHZWkTQT3FIQdlaRNBPfLOQaB4gT_pg3mhq5U_AIrQ2Xn5Ff4OrRCk_e1P2L_r&_nc_ohc=r_aSL0ZomTAQ7kNvwEksrVx&_nc_oc=Adl3nH7j0WAzriAOy8VFn-m71kHXSAC0ORl9rk4e0YqWB4YmhpTwEsMSbRIIrjZHdyg&_nc_zt=23&_nc_ht=scontent-mba2-1.xx&_nc_gid=II5KZ9wOHN2Jv5kUBfeZiA&oh=00_AfdgG6nep_vTPilmi2XBycuarWk-oDf0qUHE573Ls_qB8g&oe=69090FC0",
+                description: "Learning to release past hurts and move forward in God's grace.",
+                isFeatured: true
+            },
+
+      {
+                id: 160,
+                title: "Letting Go of the Past",
+                date: "2025-10-05",
+                speaker: "alice-gachinju",
+                service: "gikuyu",
+                monthlyTheme: "worship",
+                sundayTheme: "Forward in Faith",
+                biblePassage: "Philippians 3:13-14",
+                audioUrl: "https://drive.google.com/placeholder-swahili-2",
+                videoUrl: "https://youtube.com/placeholder-swahili-2",
+                image: "https://scontent-mba2-1.xx.fbcdn.net/v/t39.30808-6/502646590_737488925297325_5423938810502868607_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeE_HXIUZTDL61oUzJacmtSNxSEHZWkTQT3FIQdlaRNBPfLOQaB4gT_pg3mhq5U_AIrQ2Xn5Ff4OrRCk_e1P2L_r&_nc_ohc=r_aSL0ZomTAQ7kNvwEksrVx&_nc_oc=Adl3nH7j0WAzriAOy8VFn-m71kHXSAC0ORl9rk4e0YqWB4YmhpTwEsMSbRIIrjZHdyg&_nc_zt=23&_nc_ht=scontent-mba2-1.xx&_nc_gid=II5KZ9wOHN2Jv5kUBfeZiA&oh=00_AfdgG6nep_vTPilmi2XBycuarWk-oDf0qUHE573Ls_qB8g&oe=69090FC0",
+                description: "Learning to release past hurts and move forward in God's grace.",
+                isFeatured: true
+            },
+         {   id: 161,
+                title: "Letting Go of the Past",
+                date: "2025-10-12",
+                speaker: "alice-gachinju",
+                service: "swahili",
+                monthlyTheme: "worship",
+                sundayTheme: "Forward in Faith",
+                biblePassage: "Philippians 3:13-14",
+                audioUrl: "https://drive.google.com/placeholder-swahili-2",
+                videoUrl: "https://youtube.com/placeholder-swahili-2",
+                image: "https://scontent-mba2-1.xx.fbcdn.net/v/t39.30808-6/518004817_761928489520035_3888894353241639859_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeEUnuWMyNsTjOhk-d2Rh2_q5lOL6ye7brnmU4vrJ7tuuR5s2M0p7DP7ylICQMEy9ThNtMRm9cujkTHCXbVPJbVo&_nc_ohc=TqNwYoAt0Y0Q7kNvwFUIC0l&_nc_oc=AdlxhN44ixaVgb7PflDen73q3O6-CkPzWx5OFHMIPqiUHuTvly5SAoTxav7alELmndo&_nc_zt=23&_nc_ht=scontent-mba2-1.xx&_nc_gid=uPrXi6JatWjB4GnSKtjRiQ&oh=00_Afchl2nPCbQXyYbIxfmrsSuFiFyF3bugUCMSux2CvwRjFg&oe=69091BAF",
+                description: "Learning to release past hurts and move forward in God's grace.",
+                isFeatured: true
+
+        },
+
+        
+            {
+                id: 162,
+                title: "Letting Go of the Past",
+                date: "2025-10-12",
+                speaker: "alice-gachinju",
+                service: "youth",
+                monthlyTheme: "worship",
+                sundayTheme: "Forward in Faith",
+                biblePassage: "Philippians 3:13-14",
+                audioUrl: "https://drive.google.com/placeholder-swahili-2",
+                videoUrl: "https://youtube.com/placeholder-swahili-2",
+                image: "https://scontent-mba2-1.xx.fbcdn.net/v/t39.30808-6/518004817_761928489520035_3888894353241639859_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeEUnuWMyNsTjOhk-d2Rh2_q5lOL6ye7brnmU4vrJ7tuuR5s2M0p7DP7ylICQMEy9ThNtMRm9cujkTHCXbVPJbVo&_nc_ohc=TqNwYoAt0Y0Q7kNvwFUIC0l&_nc_oc=AdlxhN44ixaVgb7PflDen73q3O6-CkPzWx5OFHMIPqiUHuTvly5SAoTxav7alELmndo&_nc_zt=23&_nc_ht=scontent-mba2-1.xx&_nc_gid=uPrXi6JatWjB4GnSKtjRiQ&oh=00_Afchl2nPCbQXyYbIxfmrsSuFiFyF3bugUCMSux2CvwRjFg&oe=69091BAF",
+                description: "Learning to release past hurts and move forward in God's grace.",
+                isFeatured: true
+            },
+        
+            {
+                id: 163,
+                title: "Letting Go of the Past",
+                date: "2025-10-12",
+                speaker: "evans-ndirangu",
+                service: "main",
+                monthlyTheme: "worship",
+                sundayTheme: "Forward in Faith",
+                biblePassage: "Philippians 3:13-14",
+                audioUrl: "https://drive.google.com/placeholder-swahili-2",
+                videoUrl: "https://youtube.com/placeholder-swahili-2",
+                image: "https://scontent-mba2-1.xx.fbcdn.net/v/t39.30808-6/547320480_813001081079442_5360946364036540437_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHCVTtyrKPOtOscn-Hu67MM9DSuCJ_WiBX0NK4In9aIFeMJOUKrMGU8LcnAwZDCdBlI6gXb6KVXniTPljSLLTzs&_nc_ohc=Bw8oaJTmd_gQ7kNvwFxc3ar&_nc_oc=Adnrrsg3VgEufuxy5O-6mbTiwwAPT2Ct9UWzyOzev78XYcYmWAyL1zxPVn3j_mvQJcE&_nc_zt=23&_nc_ht=scontent-mba2-1.xx&_nc_gid=HQldBdmcnC3BBPeGNbnbdQ&oh=00_AfebFjmOu-jT6upm8FaDqO1Sj0oKIxl_Y9B1HIeSRdChqQ&oe=69092DC7",
+                description: "Learning to release past hurts and move forward in God's grace.",
+                isFeatured: true
+            },
+             {
+                id: 164,
+                title: "Letting Go of the Past",
+                date: "2025-10-12",
+                speaker: "evans-ndirangu",
+                service: "gikuyu",
+                monthlyTheme: "worship",
+                sundayTheme: "Forward in Faith",
+                biblePassage: "Philippians 3:13-14",
+                audioUrl: "https://drive.google.com/placeholder-swahili-2",
+                videoUrl: "https://youtube.com/placeholder-swahili-2",
+                image: "https://scontent-mba2-1.xx.fbcdn.net/v/t39.30808-6/547320480_813001081079442_5360946364036540437_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHCVTtyrKPOtOscn-Hu67MM9DSuCJ_WiBX0NK4In9aIFeMJOUKrMGU8LcnAwZDCdBlI6gXb6KVXniTPljSLLTzs&_nc_ohc=Bw8oaJTmd_gQ7kNvwFxc3ar&_nc_oc=Adnrrsg3VgEufuxy5O-6mbTiwwAPT2Ct9UWzyOzev78XYcYmWAyL1zxPVn3j_mvQJcE&_nc_zt=23&_nc_ht=scontent-mba2-1.xx&_nc_gid=HQldBdmcnC3BBPeGNbnbdQ&oh=00_AfebFjmOu-jT6upm8FaDqO1Sj0oKIxl_Y9B1HIeSRdChqQ&oe=69092DC7",
+                description: "Learning to release past hurts and move forward in God's grace.",
+                isFeatured: true
+            },
+            // Add more sermons following the same pattern for each Sunday of 2025
+            // Each Sunday should have 4 sermons (one for each service)
+            // Alternate speakers between Canon Joseph and Rev. Alice for main services
+            // Continue with all 12 months and their respective themes
+        ];
+
+        // Speaker names mapping
+        const speakerNames = {
+            'canon-joseph': 'Canon Venarable Joseph',
+            'alice-gachinju': 'Rev. Alice Gachinju',
+            'evans-ndirangu': 'Lay Reader Evans Ndirangu',
+            'laban-muchiri': 'Lay Reader Laban Muchiri',
+            'laban-muchiri': 'Lay Reader Laban Muchiri',
+            'elias-muikia': 'Canon Elias Muikia',
+            'bishop-tom':'Bishop Tom Plymouth',
+            'guest': 'Guest Speaker'
+        };
+
+        // Service names mapping
+        const serviceNames = {
+            'swahili': 'Swahili Service',
+            'youth': 'Youth Service',
+            'main': 'Main Service',
+            'gikuyu': 'Gikuyu Service'
+        };
+
+        // Theme names mapping
+        const themeNames = {
+            'joyful-beginnings': 'A Joyful New Beginning',
+            'prayer': 'Prayer',
+            'spiritual-growth': 'Spiritual Growth',
+            'power-cross': 'Power of The Cross',
+            'gifts-talents': 'Nurturing Gifts & Talents',
+            'holy-spirit': 'Ministry of the Holy Spirit',
+            'compassion': 'Ministry of Compassion',
+            'community-impact': 'Community Impact',
+            'spiritual-warfare': 'Spiritual Warfare',
+            'worship': 'Worship',
+            'leadership': 'Leadership & Development',
+            'family': 'Celebrating The Family'
+        };
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const sermonsGrid = document.getElementById('sermonsGrid');
+            const featuredSermons = document.getElementById('featuredSermons');
+            const yearFilter = document.getElementById('year-filter');
+            const monthFilter = document.getElementById('month-filter');
+            const serviceFilter = document.getElementById('service-filter');
+            const themeFilter = document.getElementById('theme-filter');
+            const speakerFilter = document.getElementById('speaker-filter');
+            const resetFilters = document.getElementById('reset-filters');
+            const activeFilters = document.getElementById('activeFilters');
+            const sermonsCount = document.getElementById('sermons-count');
+            const loadMoreBtn = document.getElementById('load-more');
+
+            let currentSermons = [];
+            let displayedCount = 12; // Initial number of sermons to display
+            let filteredSermons = [];
+
+            // Initialize sermons
+            function initSermons() {
+                currentSermons = [...sermonsData];
+                filteredSermons = [...sermonsData];
+                renderFeaturedSermons();
+                renderSermons();
+                updateSermonsCount();
+            }
+
+            // Render featured sermons
+            function renderFeaturedSermons() {
+                const featured = sermonsData.filter(sermon => sermon.isFeatured).slice(0, 4);
+                featuredSermons.innerHTML = '';
+                
+                featured.forEach(sermon => {
+                    const sermonCard = createSermonCard(sermon, true);
+                    featuredSermons.appendChild(sermonCard);
+                });
+            }
+
+            // Render sermons to the grid
+            function renderSermons() {
+                sermonsGrid.innerHTML = '';
+                const sermonsToShow = filteredSermons.slice(0, displayedCount);
+                
+                sermonsToShow.forEach(sermon => {
+                    const sermonCard = createSermonCard(sermon, false);
+                    sermonsGrid.appendChild(sermonCard);
+                });
+
+                // Show/hide load more button
+                if (displayedCount >= filteredSermons.length) {
+                    loadMoreBtn.style.display = 'none';
+                } else {
+                    loadMoreBtn.style.display = 'block';
+                }
+            }
+
+            // Create sermon card HTML
+            function createSermonCard(sermon, isFeatured) {
+                const card = document.createElement('div');
+                card.className = isFeatured ? 'sermon-archive-card featured' : 'sermon-archive-card';
+                card.innerHTML = `
+                    ${isFeatured ? '<div class="featured-badge">Featured</div>' : ''}
+                    <div class="sermon-archive-image">
+                        <img src="${sermon.image}" alt="${sermon.title}">
+                        <div class="sermon-overlay">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="sermon-archive-content">
+                        <div class="sermon-meta">
+                            <span class="sermon-date">${formatDate(sermon.date)}</span>
+                            <span class="sermon-service">${serviceNames[sermon.service]}</span>
+                        </div>
+                        <h3>${sermon.title}</h3>
+                        <p class="sermon-theme">${sermon.sundayTheme}</p>
+                        <p class="sermon-speaker">${speakerNames[sermon.speaker]}</p>
+                        <p class="sermon-passage">${sermon.biblePassage}</p>
+                        <p class="sermon-description">${sermon.description}</p>
+                        <div class="sermon-actions">
+                            <a href="${sermon.audioUrl}" target="_blank" class="btn btn-audio">
+                                <i class="fas fa-headphones"></i> Audio
+                            </a>
+                            <a href="${sermon.videoUrl}" target="_blank" class="btn btn-video">
+                                <i class="fas fa-play-circle"></i> Video
+                            </a>
+                        </div>
+                    </div>
+                `;
+                return card;
+            }
+
+            // Format date
+            function formatDate(dateString) {
+                const options = { year: 'numeric', month: 'long', day: 'numeric' };
+                return new Date(dateString).toLocaleDateString('en-US', options);
+            }
+
+            // Filter sermons based on selected filters
+            function filterSermons() {
+                const year = yearFilter.value;
+                const month = monthFilter.value;
+                const service = serviceFilter.value;
+                const theme = themeFilter.value;
+                const speaker = speakerFilter.value;
+
+                filteredSermons = sermonsData.filter(sermon => {
+                    const sermonDate = new Date(sermon.date);
+                    const sermonYear = sermonDate.getFullYear().toString();
+                    const sermonMonth = (sermonDate.getMonth() + 1).toString();
+
+                    return (year === 'all' || sermonYear === year) &&
+                           (month === 'all' || sermonMonth === month) &&
+                           (service === 'all' || sermon.service === service) &&
+                           (theme === 'all' || sermon.monthlyTheme === theme) &&
+                           (speaker === 'all' || sermon.speaker === speaker);
+                });
+
+                displayedCount = 12;
+                renderSermons();
+                updateActiveFilters();
+                updateSermonsCount();
+            }
+
+            // Update active filters display
+            function updateActiveFilters() {
+                activeFilters.innerHTML = '';
+                const filters = [];
+
+                if (yearFilter.value !== 'all') {
+                    filters.push(`Year: ${yearFilter.options[yearFilter.selectedIndex].text}`);
+                }
+                if (monthFilter.value !== 'all') {
+                    filters.push(`Month: ${monthFilter.options[monthFilter.selectedIndex].text}`);
+                }
+                if (serviceFilter.value !== 'all') {
+                    filters.push(`Service: ${serviceFilter.options[serviceFilter.selectedIndex].text}`);
+                }
+                if (themeFilter.value !== 'all') {
+                    filters.push(`Theme: ${themeFilter.options[themeFilter.selectedIndex].text}`);
+                }
+                if (speakerFilter.value !== 'all') {
+                    filters.push(`Speaker: ${speakerFilter.options[speakerFilter.selectedIndex].text}`);
+                }
+
+                if (filters.length > 0) {
+                    activeFilters.innerHTML = `
+                        <strong>Active Filters:</strong>
+                        ${filters.join(' • ')}
+                    `;
+                    activeFilters.style.display = 'block';
+                } else {
+                    activeFilters.style.display = 'none';
+                }
+            }
+
+            // Update sermons count display
+            function updateSermonsCount() {
+                const total = filteredSermons.length;
+                const showing = Math.min(displayedCount, total);
+                sermonsCount.textContent = `Showing ${showing} of ${total} sermons`;
+            }
+
+            // Event listeners
+            yearFilter.addEventListener('change', filterSermons);
+            monthFilter.addEventListener('change', filterSermons);
+            serviceFilter.addEventListener('change', filterSermons);
+            themeFilter.addEventListener('change', filterSermons);
+            speakerFilter.addEventListener('change', filterSermons);
+
+            resetFilters.addEventListener('click', function() {
+                yearFilter.value = 'all';
+                monthFilter.value = 'all';
+                serviceFilter.value = 'all';
+                themeFilter.value = 'all';
+                speakerFilter.value = 'all';
+                filterSermons();
+            });
+
+            loadMoreBtn.addEventListener('click', function() {
+                displayedCount += 12;
+                renderSermons();
+                updateSermonsCount();
+            });
+
+            // Initialize
+            initSermons();
+        });
+    </script>
+
+    <style>
+/* CSS Variables - Dark Green Color Scheme */
+:root {
+    --primary-green: #1b5e20;
+    --secondary-green: #2e7d32;
+    --light-green: #e8f5e9;
+    --dark-green: #0d3c13;
+    --accent-green: #388e3c;
+    --white: #ffffff;
+    --light-gray: #f8f9fa;
+    --medium-gray: #6b7280;
+    --dark-gray: #374151;
+    --border-gray: #e5e7eb;
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    --border-radius: 8px;
+    --border-radius-lg: 12px;
+    --transition: all 0.3s ease;
+}
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--dark-gray);
+    background-color: var(--white);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header & Navigation */
+header {
+    background-color: var(--white);
+    box-shadow: var(--shadow-sm);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.logo h1 {
+    color: var(--primary-green);
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+.logo p {
+    color: var(--medium-gray);
+    font-size: 0.9rem;
+}
+
+.logo a {
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--dark-gray);
+    font-weight: 500;
+    transition: var(--transition);
+    padding: 5px 0;
+    position: relative;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--primary-green);
+}
+
+.nav-links a.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-green);
+}
+
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--dark-gray);
+    cursor: pointer;
+}
+
+/* Mobile Menu Overlay */
+.mobile-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 2000;
+    display: none;
+}
+
+.mobile-menu-container {
+    background-color: var(--white);
+    width: 80%;
+    max-width: 300px;
+    height: 100%;
+    padding: 30px 20px;
+    position: relative;
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+
+.mobile-menu-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--dark-gray);
+    cursor: pointer;
+}
+
+.mobile-nav-links {
+    list-style: none;
+    margin-top: 40px;
+}
+
+.mobile-nav-links li {
+    margin-bottom: 20px;
+}
+
+.mobile-nav-links a {
+    text-decoration: none;
+    color: var(--dark-gray);
+    font-size: 1.1rem;
+    font-weight: 500;
+    display: block;
+    padding: 10px 0;
+    transition: var(--transition);
+}
+
+.mobile-nav-links a:hover,
+.mobile-nav-links a.active {
+    color: var(--primary-green);
+}
+
+/* Page Header */
+.page-header {
+    background: linear-gradient(135deg, var(--primary-green), var(--secondary-green));
+    color: var(--white);
+    padding: 80px 0;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.page-header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Section Styling */
+.section {
+    padding: 80px 0;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: var(--dark-green);
+    margin-bottom: 50px;
+    text-align: center;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary-green);
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: var(--primary-green);
+    color: var(--white);
+    border: none;
+    border-radius: var(--border-radius);
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--transition);
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: var(--dark-green);
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    background-color: var(--primary-green);
+}
+
+.btn-primary:hover {
+    background-color: var(--dark-green);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--primary-green);
+    border: 1px solid var(--primary-green);
+}
+
+.btn-secondary:hover {
+    background-color: var(--light-green);
+}
+
+/* Featured Sermons Section */
+.featured-sermons-section {
+    background: linear-gradient(135deg, var(--light-green) 0%, var(--white) 100%);
+}
+
+.featured-sermons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.sermon-archive-card.featured {
+    position: relative;
+    border: 2px solid var(--primary-green);
+}
+
+.featured-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: var(--primary-green);
+    color: var(--white);
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    z-index: 2;
+}
+
+/* Filters Section */
+.filters-section {
+    background: var(--white);
+    border-bottom: 1px solid var(--border-gray);
+}
+
+.filters-container h2 {
+    color: var(--dark-green);
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+}
+
+.filters-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.filter-group label {
+    font-weight: 600;
+    color: var(--dark-gray);
+    font-size: 0.9rem;
+}
+
+.filter-select {
+    padding: 12px 15px;
+    border: 2px solid var(--border-gray);
+    border-radius: var(--border-radius);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    background: var(--white);
+    transition: var(--transition);
+}
+
+.filter-select:focus {
+    outline: none;
+    border-color: var(--primary-green);
+    box-shadow: 0 0 0 3px rgba(27, 94, 32, 0.1);
+}
+
+.active-filters {
+    background: var(--light-green);
+    padding: 15px 20px;
+    border-radius: var(--border-radius);
+    border-left: 4px solid var(--primary-green);
+    display: none;
+}
+
+.active-filters strong {
+    color: var(--dark-green);
+}
+
+/* Sermons Archive Section */
+.sermons-archive-section {
+    background: linear-gradient(135deg, var(--light-gray) 0%, var(--white) 100%);
+}
+
+.sermons-stats {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.sermons-stats p {
+    color: var(--medium-gray);
+    font-weight: 600;
+}
+
+.sermons-archive-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.sermon-archive-card {
+    background: var(--white);
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+    border: 1px solid var(--border-gray);
+    position: relative;
+}
+
+.sermon-archive-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-xl);
+}
+
+.sermon-archive-image {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.sermon-archive-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.sermon-archive-card:hover .sermon-archive-image img {
+    transform: scale(1.05);
+}
+
+.sermon-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(27, 94, 32, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.sermon-archive-card:hover .sermon-overlay {
+    opacity: 1;
+}
+
+.sermon-overlay i {
+    color: var(--white);
+    font-size: 3rem;
+}
+
+.sermon-archive-content {
+    padding: 25px;
+}
+
+.sermon-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 0.85rem;
+}
+
+.sermon-date {
+    color: var(--primary-green);
+    font-weight: 600;
+}
+
+.sermon-service {
+    background: var(--light-green);
+    color: var(--dark-gray);
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.sermon-archive-content h3 {
+    color: var(--dark-green);
+    margin-bottom: 8px;
+    font-size: 1.3rem;
+    line-height: 1.4;
+}
+
+.sermon-theme {
+    color: var(--primary-green);
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.sermon-speaker {
+    color: var(--medium-gray);
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.sermon-passage {
+    color: var(--secondary-green);
+    font-weight: 600;
+    margin-bottom: 12px;
+    font-size: 0.9rem;
+}
+
+.sermon-description {
+    color: var(--medium-gray);
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+.sermon-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-audio, .btn-video {
+    flex: 1;
+    padding: 10px 15px;
+    font-size: 0.9rem;
+    text-decoration: none;
+    text-align: center;
+}
+
+.btn-audio {
+    background: var(--light-gray);
+    color: var(--dark-gray);
+}
+
+.btn-audio:hover {
+    background: var(--medium-gray);
+    color: var(--white);
+}
+
+.btn-video {
+    background: linear-gradient(135deg, var(--primary-green), var(--secondary-green));
+    color: var(--white);
+}
+
+.btn-video:hover {
+    background: linear-gradient(135deg, var(--secondary-green), var(--accent-green));
+}
+
+.load-more-container {
+    text-align: center;
+}
+
+/* Themes Section */
+.themes-section {
+    background: var(--white);
+}
+
+.themes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.theme-card {
+    background: var(--white);
+    padding: 25px;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-md);
+    border-top: 4px solid var(--secondary-green);
+    transition: var(--transition);
+    text-align: center;
+}
+
+.theme-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+}
+
+.theme-month {
+    background: linear-gradient(135deg, var(--primary-green), var(--secondary-green));
+    color: var(--white);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+.theme-card h3 {
+    color: var(--dark-green);
+    margin-bottom: 12px;
+    font-size: 1.3rem;
+}
+
+.theme-card p {
+    color: var(--medium-gray);
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+.theme-sermons {
+    color: var(--primary-green);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-green);
+    color: var(--white);
+    padding: 60px 0 20px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-section h3 {
+    color: var(--white);
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+    position: relative;
+}
+
+.footer-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background-color: var(--secondary-green);
+}
+
+.footer-section p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.footer-contact p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: var(--white);
+    text-decoration: none;
+    opacity: 0.9;
+    transition: var(--transition);
+}
+
+.footer-section ul li a:hover {
+    opacity: 1;
+    color: var(--light-green);
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: var(--white);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.social-links a:hover {
+    background-color: var(--secondary-green);
+    transform: translateY(-3px);
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 10px;
+}
+
+.newsletter-form input {
+    flex: 1;
+    padding: 10px 15px;
+    border: none;
+    border-radius: var(--border-radius);
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--white);
+}
+
+.newsletter-form input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.newsletter-form .btn {
+    background-color: var(--secondary-green);
+    white-space: nowrap;
+}
+
+.newsletter-form .btn:hover {
+    background-color: var(--primary-green);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: var(--white);
+    text-decoration: none;
+    opacity: 0.8;
+    transition: var(--transition);
+}
+
+.footer-links a:hover {
+    opacity: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .mobile-menu-btn {
+        display: block;
+    }
+    
+    .filters-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .sermons-archive-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .newsletter-form {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-header {
+        padding: 60px 0;
+    }
+    
+    .page-header h1 {
+        font-size: 2rem;
+    }
+    
+    .section {
+        padding: 60px 0;
+    }
+    
+    .section-title {
+        font-size: 1.7rem;
+    }
+    
+    .filters-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .sermons-archive-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .sermon-meta {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .sermon-actions {
+        flex-direction: column;
+    }
+    
+    .themes-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .featured-sermons-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .page-header h1 {
+        font-size: 1.7rem;
+    }
+    
+    .page-header p {
+        font-size: 1rem;
+    }
+    
+    .sermon-archive-content {
+        padding: 20px;
+    }
+    
+    .sermon-archive-content h3 {
+        font-size: 1.2rem;
+    }
+    
+    .theme-card {
+        padding: 20px;
+    }
+}
+
+
+
+
+
+        /* Featured Sermons Section */
+        .featured-sermons-section {
+            background: linear-gradient(135deg, var(--light-green) 0%, var(--white) 100%);
+        }
+
+        .featured-sermons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .sermon-archive-card.featured {
+            position: relative;
+            border: 2px solid var(--primary-green);
+        }
+
+        .featured-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--primary-green);
+            color: var(--white);
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            z-index: 2;
+        }
+
+        /* Rest of the CSS remains the same as previously provided */
+        .filters-section {
+            background: var(--white);
+            border-bottom: 1px solid var(--border-gray);
+        }
+
+        .filters-container h2 {
+            color: var(--dark-green);
+            margin-bottom: 25px;
+            font-size: 1.8rem;
+        }
+
+        .filters-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .filter-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .filter-group label {
+            font-weight: 600;
+            color: var(--dark-gray);
+            font-size: 0.9rem;
+        }
+
+        .filter-select {
+            padding: 12px 15px;
+            border: 2px solid var(--border-gray);
+            border-radius: var(--border-radius);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 1rem;
+            background: var(--white);
+            transition: var(--transition);
+        }
+
+        .filter-select:focus {
+            outline: none;
+            border-color: var(--primary-green);
+            box-shadow: 0 0 0 3px rgba(27, 94, 32, 0.1);
+        }
+
+        .active-filters {
+            background: var(--light-green);
+            padding: 15px 20px;
+            border-radius: var(--border-radius);
+            border-left: 4px solid var(--primary-green);
+            display: none;
+        }
+
+        .active-filters strong {
+            color: var(--dark-green);
+        }
+
+        .sermons-archive-section {
+            background: linear-gradient(135deg, var(--light-gray) 0%, var(--white) 100%);
+        }
+
+        .sermons-stats {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .sermons-stats p {
+            color: var(--medium-gray);
+            font-weight: 600;
+        }
+
+        .sermons-archive-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .sermon-archive-card {
+            background: var(--white);
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+            border: 1px solid var(--border-gray);
+            position: relative;
+        }
+
+        .sermon-archive-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .sermon-archive-image {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .sermon-archive-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .sermon-archive-card:hover .sermon-archive-image img {
+            transform: scale(1.05);
+        }
+
+        .sermon-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(27, 94, 32, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .sermon-archive-card:hover .sermon-overlay {
+            opacity: 1;
+        }
+
+        .sermon-overlay i {
+            color: var(--white);
+            font-size: 3rem;
+        }
+
+        .sermon-archive-content {
+            padding: 25px;
+        }
+
+        .sermon-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            font-size: 0.85rem;
+        }
+
+        .sermon-date {
+            color: var(--primary-green);
+            font-weight: 600;
+        }
+
+        .sermon-service {
+            background: var(--light-green);
+            color: var(--dark-gray);
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .sermon-archive-content h3 {
+            color: var(--dark-green);
+            margin-bottom: 8px;
+            font-size: 1.3rem;
+            line-height: 1.4;
+        }
+
+        .sermon-theme {
+            color: var(--primary-green);
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+
+        .sermon-speaker {
+            color: var(--medium-gray);
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .sermon-passage {
+            color: var(--secondary-green);
+            font-weight: 600;
+            margin-bottom: 12px;
+            font-size: 0.9rem;
+        }
+
+        .sermon-description {
+            color: var(--medium-gray);
+            line-height: 1.6;
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+        }
+
+        .sermon-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn-audio, .btn-video {
+            flex: 1;
+            padding: 10px 15px;
+            font-size: 0.9rem;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .btn-audio {
+            background: var(--light-gray);
+            color: var(--dark-gray);
+        }
+
+        .btn-audio:hover {
+            background: var(--medium-gray);
+            color: var(--white);
+        }
+
+        .btn-video {
+            background: linear-gradient(135deg, var(--primary-green), var(--secondary-green));
+            color: var(--white);
+        }
+
+        .btn-video:hover {
+            background: linear-gradient(135deg, var(--secondary-green), var(--accent-green));
+        }
+
+        .load-more-container {
+            text-align: center;
+        }
+
+        .themes-section {
+            background: var(--white);
+        }
+
+        .themes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .theme-card {
+            background: var(--white);
+            padding: 25px;
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-md);
+            border-top: 4px solid var(--secondary-green);
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .theme-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .theme-month {
+            background: linear-gradient(135deg, var(--primary-green), var(--secondary-green));
+            color: var(--white);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+
+        .theme-card h3 {
+            color: var(--dark-green);
+            margin-bottom: 12px;
+            font-size: 1.3rem;
+        }
+
+        .theme-card p {
+            color: var(--medium-gray);
+            line-height: 1.6;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+
+        .theme-sermons {
+            color: var(--primary-green);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .featured-sermons-grid,
+            .sermons-archive-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .sermon-meta {
+                flex-direction: column;
+                gap: 5px;
+            }
+            
+            .sermon-actions {
+                flex-direction: column;
+            }
+            
+            .themes-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</body>
+</html>

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Grace Community Church</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="../css/main.css" as="style">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="../index.html">
+                    <h1>St Monicas ACK Thika</h1>
+                    <p>Where faith, hope, and love meet</p>
+                </a>
+            </div>
+            <nav>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html" class="active">About Us</a></li>
+                    <li><a href="beliefs.html">Our Beliefs</a></li>
+                    <li><a href="staff.html">Our Staff</a></li>
+                    <li><a href="ministries.html">Ministries</a></li>
+                    <li><a href="sermons-archive.html">Sermons</a></li>
+                    <li><a href="events-calendar.html">Events</a></li>
+                    <li><a href="give-online.html">Give</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+        <div class="mobile-menu-container">
+            <button class="mobile-menu-close" id="mobileMenuClose">
+                <i class="fas fa-times"></i>
+            </button>
+            <ul class="mobile-nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html" class="active">About Us</a></li>
+                <li><a href="beliefs.html">Our Beliefs</a></li>
+                <li><a href="staff.html">Our Staff</a></li>
+                <li><a href="ministries.html">Ministries</a></li>
+                <li><a href="sermons-archive.html">Sermons</a></li>
+                <li><a href="events-calendar.html">Events</a></li>
+                <li><a href="give-online.html">Give</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>About Us</h1>
+            <p>Discover our story, mission, and the community that makes St Monicas ACK Thika special</p>
+        </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section class="section">
+        <div class="container">
+            <div class="grid grid-cols-2 gap-8 items-center">
+                <div>
+                    <h2 class="section-title text-left">Our Story</h2>
+                    <p class="text-lg text-muted mb-4">
+                        St Monicas ACK Thika was founded in 1985 with a vision to create a welcoming community 
+                        where people could encounter God's grace and grow in their faith journey.
+                    </p>
+                    <p class="text-muted mb-4">
+                        What started as a small gathering in a home has grown into a vibrant community of believers 
+                        from diverse backgrounds, united by our love for Christ and commitment to serving our community.
+                    </p>
+                    <p class="text-muted">
+                        Over the years, we've remained committed to our core values of faith, hope, and love, 
+                        continually adapting to meet the needs of our growing congregation while staying true to 
+                        biblical principles.
+                    </p>
+                </div>
+                <div class="text-center">
+                    <div class="image-placeholder" style="background: var(--gray-100); padding: 4rem; border-radius: var(--radius-lg);">
+                        <i class="fas fa-history" style="font-size: 4rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                        <p style="font-size: 1.25rem; font-weight: 600; color: var(--primary-color);">Our Journey Since 1985</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision Section -->
+    <section class="section" style="background: var(--gray-50);">
+        <div class="container">
+            <div class="grid grid-cols-2 gap-8">
+                <div class="text-center">
+                    <div class="mb-6">
+                        <i class="fas fa-bullseye" style="font-size: 3rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                        <h3>Our Mission</h3>
+                    </div>
+                    <p class="text-muted">
+                        To make disciples of Jesus Christ who love God passionately, serve others compassionately, 
+                        and share the Gospel courageously in our community and beyond.
+                    </p>
+                </div>
+                <div class="text-center">
+                    <div class="mb-6">
+                        <i class="fas fa-eye" style="font-size: 3rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                        <h3>Our Vision</h3>
+                    </div>
+                    <p class="text-muted">
+                        To be a thriving, multi-generational church that transforms lives through authentic worship, 
+                        biblical teaching, and compassionate outreach, impacting Thika and beyond for Christ.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Our Core Values</h2>
+            <div class="grid grid-cols-3 gap-6">
+                <div class="text-center">
+                    <div class="ministry-icon" style="margin: 0 auto 1.5rem;">
+                        <i class="fas fa-cross"></i>
+                    </div>
+                    <h4>Biblical Foundation</h4>
+                    <p class="text-muted">
+                        We are committed to the authority of Scripture and teaching God's Word with clarity and relevance.
+                    </p>
+                </div>
+                <div class="text-center">
+                    <div class="ministry-icon" style="margin: 0 auto 1.5rem;">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h4>Authentic Community</h4>
+                    <p class="text-muted">
+                        We value genuine relationships where people can be real, find support, and grow together in faith.
+                    </p>
+                </div>
+                <div class="text-center">
+                    <div class="ministry-icon" style="margin: 0 auto 1.5rem;">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h4>Compassionate Service</h4>
+                    <p class="text-muted">
+                        We demonstrate Christ's love through practical service to our church, community, and world.
+                    </p>
+                </div>
+                <div class="text-center">
+                    <div class="ministry-icon" style="margin: 0 auto 1.5rem;">
+                        <i class="fas fa-pray"></i>
+                    </div>
+                    <h4>Spiritual Growth</h4>
+                    <p class="text-muted">
+                        We are committed to helping every believer mature in their faith and discover their God-given purpose.
+                    </p>
+                </div>
+                <div class="text-center">
+                    <div class="ministry-icon" style="margin: 0 auto 1.5rem;">
+                        <i class="fas fa-globe-africa"></i>
+                    </div>
+                    <h4>Cultural Relevance</h4>
+                    <p class="text-muted">
+                        We communicate the timeless truth of the Gospel in ways that connect with contemporary culture.
+                    </p>
+                </div>
+                <div class="text-center">
+                    <div class="ministry-icon" style="margin: 0 auto 1.5rem;">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h4>Excellence</h4>
+                    <p class="text-muted">
+                        We strive for excellence in all we do as an expression of our worship to God.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What to Expect Section -->
+    <section class="section" style="background: linear-gradient(135deg, var(--primary-color), var(--primary-dark)); color: var(--white);">
+        <div class="container">
+            <h2 class="section-title" style="color: var(--white);">What to Expect</h2>
+            <div class="grid grid-cols-3 gap-6">
+                <div class="text-center">
+                    <div class="mb-4">
+                        <i class="fas fa-users" style="font-size: 3rem; color: var(--secondary-color);"></i>
+                    </div>
+                    <h4 style="color: var(--white);">Welcoming Community</h4>
+                    <p>You'll be greeted by friendly faces and find a place where you can belong.</p>
+                </div>
+                <div class="text-center">
+                    <div class="mb-4">
+                        <i class="fas fa-music" style="font-size: 3rem; color: var(--secondary-color);"></i>
+                    </div>
+                    <h4 style="color: var(--white);">Inspiring Worship</h4>
+                    <p>Engage in meaningful worship that connects you with God through music and prayer.</p>
+                </div>
+                <div class="text-center">
+                    <div class="mb-4">
+                        <i class="fas fa-book" style="font-size: 3rem; color: var(--secondary-color);"></i>
+                    </div>
+                    <h4 style="color: var(--white);">Biblical Teaching</h4>
+                    <p>Hear practical messages from the Bible that apply to your everyday life.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership Preview -->
+    <section class="section">
+        <div class="container">
+            <div class="text-center mb-8">
+                <h2 class="section-title">Meet Our Leadership</h2>
+                <p class="section-subtitle">Get to know the team that guides our church community</p>
+            </div>
+            <div class="grid grid-cols-3 gap-6">
+                <div class="text-center">
+                    <div class="image-placeholder" style="
+         background: var(--gray-100) url('https://scontent-mba2-1.xx.fbcdn.net/v/t39.30808-6/494754985_711157691263782_6621035427802355110_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHzSPPQO575D7uakVS2wUKkj0RQV1rDYcCPRFBXWsNhwAnMrtvATXH9xlMQSQK3nxkXfjyYxSARmZxcvTqKqSjE&_nc_ohc=PSfJByL-Y9oQ7kNvwFo53Ew&_nc_oc=AdlOJShLrzhsfCKR1Qj4pGSt7cbjH0BKKS7VscMRUQZBlQMALVHSqxuyra9UvJMwWh8&_nc_zt=23&_nc_ht=scontent-mba2-1.xx&_nc_gid=f2ZLnQRUUttyME1kBgh96A&oh=00_Afe1qjvhC117NzQZsPC08JQT_1wocnbGCnZI8Ap7RizJlw&oe=69094D96') center/cover no-repeat;
+         border-radius: 50%;
+         width: 150px;
+         height: 150px;
+         margin: 0 auto 1rem;
+       ">
+                    </div>
+                    <h4>Canon Venerable Joseph Kuria</h4>
+                    <p class="text-muted">Vicar</p>
+                </div>
+                <div class="text-center">
+                    <div class="image-placeholder" style="
+         background: var(--gray-100) url('https://scontent-mba2-1.xx.fbcdn.net/v/t39.30808-6/555625760_822855876760629_3388041638753839588_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeF0X7nB5pXddqQxWrHChGAAZqjhR4oACl5mqOFHigAKXnYb4E_OpE7oyNVBSdkeZWwyDc799Giv3rTmIp2CeGlw&_nc_ohc=ldwhzJMMhv4Q7kNvwHOXFS1&_nc_oc=AdmB6RX26GZ-zlfnu0gbZtIv4RSrHi4L63MLOb8u0d8gBEcxyTy1DK-rmMmD2BlMnfQ&_nc_zt=23&_nc_ht=scontent-mba2-1.xx&_nc_gid=QgdoH_hHvOUZdDTNfvVf8A&oh=00_Aff1LDLEOEsQcE3IRS4A5V92K7F2LToWxs-eVXF6BF8dBA&oe=6909159A') center/cover no-repeat;
+         border-radius: 50%;
+         width: 150px;
+         height: 150px;
+         margin: 0 auto 1rem;
+       ">
+                    </div>
+                    <h4>Reverend Alice Gachinju</h4>
+                    <p class="text-muted">Assistant Minister</p>
+                </div>
+                <div class="text-center">
+  <div class="image-placeholder" style="
+         background: var(--gray-100) url('https://scontent-mba2-1.xx.fbcdn.net/v/t39.30808-6/523960924_772829035096647_827432965745945120_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeFMvX8f0umOqZ55u0vqRZOZj2nryR1gbrmPaevJHWBuuZ_NzHwsJsNalOIc7y7kudRhWc2Mqs2FK_cUZGhBj_oW&_nc_ohc=mxGuwKHqitgQ7kNvwH9DYMa&_nc_oc=Adl56JUHprvB4bb1SOxlIwrPLQ4CSOuzX_uoj3K-V6g1tkAeTpvRAInURt1jSat8VKU&_nc_zt=23&_nc_ht=scontent-mba2-1.xx&_nc_gid=TUpyE9S-WUN10KHYSzco1Q&oh=00_Afdp_LnKgt6Nho4J7LgWDLgqZiS2KubLhUG5yw5o0tFMZw&oe=69093BE1') center/cover no-repeat;
+         border-radius: 50%;
+         width: 150px;
+         height: 150px;
+         margin: 0 auto 1rem;
+       ">
+  </div>
+  <h4>Alex Mwangi</h4>
+  <p class="text-muted">Associate Pastor</p>
+</div>
+            </div>
+            <div class="text-center mt-8">
+                <a href="staff.html" class="btn btn-primary">Meet Our Full Team</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>St Monicas ACK Thika</h3>
+                    <p>Living out God's love in our community and beyond. Join us as we grow in faith and serve with purpose.</p>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-map-marker-alt"></i> Kenyatta Highway, Thika Town</p>
+                        <p><i class="fas fa-phone"></i> (254) 720-577 944</p>
+                        <p><i class="fas fa-envelope"></i> info@stmonicasackthika.church</p>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="beliefs.html">Our Beliefs</a></li>
+                        <li><a href="staff.html">Our Staff</a></li>
+                        <li><a href="ministries.html">Ministries</a></li>
+                        <li><a href="sermons-archive.html">Sermons</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Service Times</h3>
+                    <ul>
+                        <li>Sunday Main Service: 9:20 AM</li>
+                        <li>Swahili Service: 7:00 AM</li>
+                        <li>Youth Service: 8:20 AM</li>
+                        <li>Gikuyu Service: 11:30 AM</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Connect With Us</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email" required>
+                        <button type="submit" class="btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 St Monicas ACK Thika. All Rights Reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+/* Form Group */
+.form-group {
+    margin-bottom: var(--space-6);
+}
+
+.form-label {
+    display: block;
+    margin-bottom: var(--space-2);
+    font-weight: 600;
+    color: var(--gray-700);
+}
+
+/* Form Controls */
+.form-control {
+    width: 100%;
+    padding: var(--space-3) var(--space-4);
+    border: 2px solid var(--gray-300);
+    border-radius: var(--radius);
+    font-size: var(--text-base);
+    transition: var(--transition);
+    background: var(--white);
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgb(44 85 48 / 0.1);
+}
+
+.form-control::placeholder {
+    color: var(--gray-400);
+}
+
+/* Form Row */
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-4);
+}
+
+/* Select */
+.form-select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right var(--space-3) center;
+    background-repeat: no-repeat;
+    background-size: 1.5em 1.5em;
+    padding-right: var(--space-10);
+}
+
+/* Textarea */
+.form-textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Checkbox and Radio */
+.form-check {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-3);
+    margin-bottom: var(--space-3);
+    cursor: pointer;
+}
+
+.form-check-input {
+    margin-top: var(--space-1);
+    flex-shrink: 0;
+}
+
+.form-check-label {
+    font-weight: normal;
+    margin-bottom: 0;
+}
+
+/* Form Validation */
+.form-control.is-invalid {
+    border-color: var(--error);
+}
+
+.form-control.is-valid {
+    border-color: var(--success);
+}
+
+.form-feedback {
+    display: block;
+    margin-top: var(--space-2);
+    font-size: var(--text-sm);
+}
+
+.form-feedback.is-invalid {
+    color: var(--error);
+}
+
+.form-feedback.is-valid {
+    color: var(--success);
+}

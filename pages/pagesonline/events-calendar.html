@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events Calendar - Grace Community Church</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="../css/main.css" as="style">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="../index.html">
+                    <h1>Grace Community Church</h1>
+                    <p>Where faith, hope, and love meet</p>
+                </a>
+            </div>
+            <nav>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="beliefs.html">Our Beliefs</a></li>
+                    <li><a href="staff.html">Our Staff</a></li>
+                    <li><a href="ministries.html">Ministries</a></li>
+                    <li><a href="sermons-archive.html">Sermons</a></li>
+                    <li><a href="events-calendar.html" class="active">Events</a></li>
+                    <li><a href="give-online.html">Give</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+        <div class="mobile-menu-container">
+            <button class="mobile-menu-close" id="mobileMenuClose">
+                <i class="fas fa-times"></i>
+            </button>
+            <ul class="mobile-nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="beliefs.html">Our Beliefs</a></li>
+                <li><a href="staff.html">Our Staff</a></li>
+                <li><a href="ministries.html">Ministries</a></li>
+                <li><a href="sermons-archive.html">Sermons</a></li>
+                <li><a href="events-calendar.html" class="active">Events</a></li>
+                <li><a href="give-online.html">Give</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Events Calendar</h1>
+            <p>Stay connected with what's happening in our church community</p>
+        </div>
+    </section>
+
+    <!-- Calendar Navigation -->
+    <section class="section" style="background: var(--white); padding: 2rem 0; border-bottom: 1px solid var(--gray-200);">
+        <div class="container">
+            <div class="calendar-nav">
+                <div class="calendar-controls">
+                    <button class="btn btn-outline" id="prevMonth">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <h2 id="currentMonth">March 2024</h2>
+                    <button class="btn btn-outline" id="nextMonth">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                <div class="view-options">
+                    <button class="view-btn active" data-view="month">Month</button>
+                    <button class="view-btn" data-view="list">List</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Monthly Calendar View -->
+    <section class="section calendar-view active" id="monthView">
+        <div class="container">
+            <div class="calendar-header">
+                <div class="day-header">Sun</div>
+                <div class="day-header">Mon</div>
+                <div class="day-header">Tue</div>
+                <div class="day-header">Wed</div>
+                <div class="day-header">Thu</div>
+                <div class="day-header">Fri</div>
+                <div class="day-header">Sat</div>
+            </div>
+            <div class="calendar-grid" id="calendarGrid">
+                <!-- Calendar days will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Upcoming Events List View -->
+    <section class="section list-view" id="listView" style="display: none;">
+        <div class="container">
+            <h2 class="section-title">Upcoming Events</h2>
+            
+            <!-- March 2024 Events -->
+            <div class="month-section">
+                <h3 class="month-title">March 2024</h3>
+                <div class="events-list">
+                    <!-- Event 1 -->
+                    <div class="event-item">
+                        <div class="event-date">
+                            <span class="event-day">15</span>
+                            <span class="event-month">MAR</span>
+                        </div>
+                        <div class="event-details">
+                            <h4>Men's Breakfast & Bible Study</h4>
+                            <div class="event-meta">
+                                <span><i class="fas fa-clock"></i> 8:00 AM - 10:00 AM</span>
+                                <span><i class="fas fa-map-marker-alt"></i> Church Hall</span>
+                                <span><i class="fas fa-users"></i> Men's Ministry</span>
+                            </div>
+                            <p class="event-description">
+                                Join the men of Grace Community Church for fellowship, a hearty breakfast, 
+                                and Bible study. This month we're studying "Being God's Man in Leading a Family."
+                            </p>
+                            <div class="event-actions">
+                                <a href="contact.html" class="btn btn-sm">RSVP</a>
+                                <a href="#" class="btn btn-sm btn-outline">Add to Calendar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Event 2 -->
+                    <div class="event-item">
+                        <div class="event-date">
+                            <span class="event-day">20</span>
+                            <span class="event-month">MAR</span>
+                        </div>
+                        <div class="event-details">
+                            <h4>Youth Camp Planning Meeting</h4>
+                            <div class="event-meta">
+                                <span><i class="fas fa-clock"></i> 5:00 PM - 7:00 PM</span>
+                                <span><i class="fas fa-map-marker-alt"></i> Youth Center</span>
+                                <span><i class="fas fa-users"></i> Youth Ministry</span>
+                            </div>
+                            <p class="event-description">
+                                Important planning meeting for our upcoming youth summer camp. All youth leaders 
+                                and parents interested in volunteering are encouraged to attend.
+                            </p>
+                            <div class="event-actions">
+                                <a href="contact.html" class="btn btn-sm">RSVP</a>
+                                <a href="#" class="btn btn-sm btn-outline">Add to Calendar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Event 3 -->
+                    <div class="event-item">
+                        <div class="event-date">
+                            <span class="event-day">24</span>
+                            <span class="event-month">MAR</span>
+                        </div>
+                        <div class="event-details">
+                            <h4>Community Outreach Day</h4>
+                            <div class="event-meta">
+                                <span><i class="fas fa-clock"></i> 9:00 AM - 1:00 PM</span>
+                                <span><i class="fas fa-map-marker-alt"></i> Thika Town Center</span>
+                                <span><i class="fas fa-users"></i> Outreach Ministry</span>
+                            </div>
+                            <p class="event-description">
+                                Join us as we serve our community through various outreach activities including 
+                                food distribution, prayer walks, and children's programs. All are welcome to participate.
+                            </p>
+                            <div class="event-actions">
+                                <a href="contact.html" class="btn btn-sm">Volunteer</a>
+                                <a href="#" class="btn btn-sm btn-outline">Add to Calendar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Event 4 -->
+                    <div class="event-item featured">
+                        <div class="event-date">
+                            <span class="event-day">29</span>
+                            <span class="event-month">MAR</span>
+                        </div>
+                        <div class="event-details">
+                            <div class="featured-badge">Special Event</div>
+                            <h4>Good Friday Service</h4>
+                            <div class="event-meta">
+                                <span><i class="fas fa-clock"></i> 6:00 PM - 7:30 PM</span>
+                                <span><i class="fas fa-map-marker-alt"></i> Main Sanctuary</span>
+                                <span><i class="fas fa-users"></i> All Church</span>
+                            </div>
+                            <p class="event-description">
+                                Join us for a solemn and reflective Good Friday service as we remember the sacrifice 
+                                of Jesus Christ on the cross. Communion will be served.
+                            </p>
+                            <div class="event-actions">
+                                <a href="contact.html" class="btn btn-sm">Learn More</a>
+                                <a href="#" class="btn btn-sm btn-outline">Add to Calendar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- April 2024 Events -->
+            <div class="month-section">
+                <h3 class="month-title">April 2024</h3>
+                <div class="events-list">
+                    <!-- Event 5 -->
+                    <div class="event-item">
+                        <div class="event-date">
+                            <span class="event-day">1</span>
+                            <span class="event-month">APR</span>
+                        </div>
+                        <div class="event-details">
+                            <h4>Easter Sunday Celebration</h4>
+                            <div class="event-meta">
+                                <span><i class="fas fa-clock"></i> 7:00 AM, 9:20 AM, 11:30 AM</span>
+                                <span><i class="fas fa-map-marker-alt"></i> Church Campus</span>
+                                <span><i class="fas fa-users"></i> All Church</span>
+                            </div>
+                            <p class="event-description">
+                                Celebrate the resurrection of Jesus Christ with us! Special services in Swahili, 
+                                English, and Gikuyu. Children's Easter egg hunt following the 9:20 AM service.
+                            </p>
+                            <div class="event-actions">
+                                <a href="contact.html" class="btn btn-sm">Service Times</a>
+                                <a href="#" class="btn btn-sm btn-outline">Add to Calendar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Event 6 -->
+                    <div class="event-item">
+                        <div class="event-date">
+                            <span class="event-day">6</span>
+                            <span class="event-month">APR</span>
+                        </div>
+                        <div class="event-details">
+                            <h4>Women's Ministry Brunch</h4>
+                            <div class="event-meta">
+                                <span><i class="fas fa-clock"></i> 10:00 AM - 12:00 PM</span>
+                                <span><i class="fas fa-map-marker-alt"></i> Fellowship Hall</span>
+                                <span><i class="fas fa-users"></i> Women's Ministry</span>
+                            </div>
+                            <p class="event-description">
+                                Ladies of all ages are invited for a special brunch and fellowship. Guest speaker 
+                                will share on "The Power of a Praying Woman."
+                            </p>
+                            <div class="event-actions">
+                                <a href="contact.html" class="btn btn-sm">RSVP</a>
+                                <a href="#" class="btn btn-sm btn-outline">Add to Calendar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Events -->
+    <section class="section" style="background: var(--gray-50);">
+        <div class="container">
+            <h2 class="section-title">Featured Events</h2>
+            <div class="featured-events-grid">
+                <div class="featured-event-card">
+                    <div class="event-image" style="background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));">
+                        <i class="fas fa-egg"></i>
+                    </div>
+                    <div class="event-content">
+                        <div class="event-date-badge">
+                            <span class="month">APR</span>
+                            <span class="day">1</span>
+                        </div>
+                        <h3>Easter Sunday Celebration</h3>
+                        <p class="event-time"><i class="fas fa-clock"></i> Multiple Services</p>
+                        <p class="event-location"><i class="fas fa-map-marker-alt"></i> Church Campus</p>
+                        <p>Join us for a glorious celebration of Jesus' resurrection with special services and family activities.</p>
+                        <a href="contact.html" class="btn btn-primary">Service Details</a>
+                    </div>
+                </div>
+
+                <div class="featured-event-card">
+                    <div class="event-image" style="background: linear-gradient(135deg, #e74c3c, #c0392b);">
+                        <i class="fas fa-campground"></i>
+                    </div>
+                    <div class="event-content">
+                        <div class="event-date-badge">
+                            <span class="month">JUN</span>
+                            <span class="day">15-17</span>
+                        </div>
+                        <h3>Youth Summer Camp</h3>
+                        <p class="event-time"><i class="fas fa-clock"></i> 3 Days</p>
+                        <p class="event-location"><i class="fas fa-map-marker-alt"></i> Aberdare Campsite</p>
+                        <p>An unforgettable weekend of faith, fun, and friendship for our youth. Registration opens April 1st.</p>
+                        <a href="contact.html" class="btn btn-primary">Get Information</a>
+                    </div>
+                </div>
+
+                <div class="featured-event-card">
+                    <div class="event-image" style="background: linear-gradient(135deg, #3498db, #2980b9);">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <div class="event-content">
+                        <div class="event-date-badge">
+                            <span class="month">MAY</span>
+                            <span class="day">25</span>
+                        </div>
+                        <h3>Worship Night</h3>
+                        <p class="event-time"><i class="fas fa-clock"></i> 6:30 PM - 8:30 PM</p>
+                        <p class="event-location"><i class="fas fa-map-marker-alt"></i> Main Sanctuary</p>
+                        <p>An evening of powerful worship and prayer. Come expecting to encounter God's presence in a fresh way.</p>
+                        <a href="contact.html" class="btn btn-primary">Join Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recurring Events -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Weekly & Monthly Events</h2>
+            <div class="recurring-events">
+                <div class="recurring-event-category">
+                    <h3>Weekly Services</h3>
+                    <div class="recurring-event-list">
+                        <div class="recurring-event">
+                            <strong>Sunday Main Service</strong>
+                            <span>Every Sunday, 9:20 AM</span>
+                            <span>Main Sanctuary</span>
+                        </div>
+                        <div class="recurring-event">
+                            <strong>Swahili Service</strong>
+                            <span>Every Sunday, 7:00 AM</span>
+                            <span>Chapel</span>
+                        </div>
+                        <div class="recurring-event">
+                            <strong>Youth Service</strong>
+                            <span>Every Sunday, 8:20 AM</span>
+                            <span>Youth Center</span>
+                        </div>
+                        <div class="recurring-event">
+                            <strong>Gikuyu Service</strong>
+                            <span>Every Sunday, 11:30 AM</span>
+                            <span>Main Sanctuary</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recurring-event-category">
+                    <h3>Weekly Ministries</h3>
+                    <div class="recurring-event-list">
+                        <div class="recurring-event">
+                            <strong>Youth Fellowship</strong>
+                            <span>Every Friday, 6:00 PM</span>
+                            <span>Youth Center</span>
+                        </div>
+                        <div class="recurring-event">
+                            <strong>Young Adults Bible Study</strong>
+                            <span>Every Tuesday, 7:00 PM</span>
+                            <span>Fellowship Hall</span>
+                        </div>
+                        <div class="recurring-event">
+                            <strong>Prayer Meeting</strong>
+                            <span>Every Wednesday, 7:00 PM</span>
+                            <span>Prayer Room</span>
+                        </div>
+                        <div class="recurring-event">
+                            <strong>Worship Team Practice</strong>
+                            <span>Every Thursday, 6:00 PM</span>
+                            <span>Sanctuary</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recurring-event-category">
+                    <h3>Monthly Events</h3>
+                    <div class="recurring-event-list">
+                        <div class="recurring-event">
+                            <strong>Men's Breakfast</strong>
+                            <span>1st Saturday, 8:00 AM</span>
+                            <span>Church Hall</span>
+                        </div>
+                        <div class="recurring-event">
+                            <strong>Women's Brunch</strong>
+                            <span>2nd Saturday, 10:00 AM</span>
+                            <span>Fellowship Hall</span>
+                        </div>
+                        <div class="recurring-event">
+                            <strong>Leadership Meeting</strong>
+                            <span>3rd Tuesday, 6:30 PM</span>
+                            <span>Conference Room</span>
+                        </div>
+                        <div class="recurring-event">
+                            <strong>Community Outreach</strong>
+                            <span>Last Saturday, 9:00 AM</span>
+                            <span>Various Locations</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Submission CTA -->
+    <section class="section cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Have an Event to Share?</h2>
+                <p>If you're planning a church-related event or ministry activity, we'd love to help promote it to our church family.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary">Submit an Event</a>
+                    <a href="contact.html" class="btn btn-secondary">Contact Events Team</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Grace Community Church</h3>
+                    <p>Living out God's love in our community and beyond. Join us as we grow in faith and serve with purpose.</p>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-map-marker-alt"></i> Kenyatta Highway, Thika Town</p>
+                        <p><i class="fas fa-phone"></i> (254) 720-577 944</p>
+                        <p><i class="fas fa-envelope"></i> info@gracechurch.org</p>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="beliefs.html">Our Beliefs</a></li>
+                        <li><a href="staff.html">Our Staff</a></li>
+                        <li><a href="ministries.html">Ministries</a></li>
+                        <li><a href="sermons-archive.html">Sermons</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Service Times</h3>
+                    <ul>
+                        <li>Sunday Main Service: 9:20 AM</li>
+                        <li>Swahili Service: 7:00 AM</li>
+                        <li>Youth Service: 8:20 AM</li>
+                        <li>Gikuyu Service: 11:30 AM</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Connect With Us</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email" required>
+                        <button type="submit" class="btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Grace Community Church. All Rights Reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script src="events-calendar.js"></script>
+
+    <style>
+        .calendar-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: var(--space-4);
+        }
+
+        .calendar-controls {
+            display: flex;
+            align-items: center;
+            gap: var(--space-4);
+        }
+
+        .calendar-controls h2 {
+            margin: 0;
+            color: var(--primary-color);
+            min-width: 150px;
+            text-align: center;
+        }
+
+        .view-options {
+            display: flex;
+            background: var(--gray-100);
+            padding: 4px;
+            border-radius: var(--radius);
+        }
+
+        .view-btn {
+            background: none;
+            border: none;
+            padding: 8px 16px;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 500;
+        }
+
+        .view-btn.active {
+            background: var(--white);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .calendar-header {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 1px;
+            margin-bottom: var(--space-2);
+        }
+
+        .day-header {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: var(--space-3);
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 1px;
+            background: var(--gray-200);
+            border: 1px solid var(--gray-200);
+        }
+
+        .calendar-day {
+            background: var(--white);
+            padding: var(--space-2);
+            min-height: 100px;
+            position: relative;
+        }
+
+        .calendar-day.other-month {
+            background: var(--gray-50);
+            color: var(--gray-400);
+        }
+
+        .calendar-day.today {
+            background: var(--light-blue);
+        }
+
+        .day-number {
+            font-weight: 600;
+            margin-bottom: var(--space-1);
+        }
+
+        .calendar-event {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: var(--text-xs);
+            margin-bottom: 2px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .calendar-event:hover {
+            opacity: 0.9;
+        }
+
+        .month-section {
+            margin-bottom: var(--space-8);
+        }
+
+        .month-title {
+            color: var(--primary-color);
+            margin-bottom: var(--space-4);
+            padding-bottom: var(--space-2);
+            border-bottom: 2px solid var(--gray-200);
+        }
+
+        .events-list {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-4);
+        }
+
+        .event-item {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            padding: var(--space-4);
+            display: flex;
+            gap: var(--space-4);
+            align-items: flex-start;
+            transition: var(--transition);
+        }
+
+        .event-item.featured {
+            border: 2px solid var(--secondary-color);
+            position: relative;
+        }
+
+        .event-item:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .event-date {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: var(--space-3);
+            border-radius: var(--radius);
+            text-align: center;
+            min-width: 70px;
+            flex-shrink: 0;
+        }
+
+        .event-day {
+            display: block;
+            font-size: var(--text-2xl);
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        .event-month {
+            display: block;
+            font-size: var(--text-sm);
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .event-details {
+            flex: 1;
+        }
+
+        .featured-badge {
+            background: var(--secondary-color);
+            color: var(--gray-900);
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: var(--text-xs);
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: var(--space-2);
+        }
+
+        .event-details h4 {
+            color: var(--primary-color);
+            margin-bottom: var(--space-2);
+        }
+
+        .event-meta {
+            display: flex;
+            gap: var(--space-4);
+            margin-bottom: var(--space-3);
+            flex-wrap: wrap;
+        }
+
+        .event-meta span {
+            display: flex;
+            align-items: center;
+            gap: var(--space-1);
+            color: var(--gray-600);
+            font-size: var(--text-sm);
+        }
+
+        .event-meta i {
+            color: var(--primary-color);
+        }
+
+        .event-description {
+            color: var(--gray-600);
+            line-height: 1.6;
+            margin-bottom: var(--space-3);
+        }
+
+        .event-actions {
+            display: flex;
+            gap: var(--space-2);
+            flex-wrap: wrap;
+        }
+
+        .featured-events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: var(--space-6);
+        }
+
+        .featured-event-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            overflow: hidden;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .featured-event-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .event-image {
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+        }
+
+        .event-image i {
+            font-size: 3rem;
+            opacity: 0.9;
+        }
+
+        .event-date-badge {
+            position: absolute;
+            top: 100px;
+            right: 20px;
+            background: var(--white);
+            color: var(--primary-color);
+            padding: 8px;
+            border-radius: var(--radius);
+            text-align: center;
+            box-shadow: var(--shadow-md);
+        }
+
+        .event-date-badge .month {
+            display: block;
+            font-size: var(--text-xs);
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .event-date-badge .day {
+            display: block;
+            font-size: var(--text-lg);
+            font-weight: 700;
+        }
+
+        .event-content {
+            padding: var(--space-6);
+        }
+
+        .event-content h3 {
+            color: var(--primary-color);
+            margin-bottom: var(--space-2);
+        }
+
+        .event-time,
+        .event-location {
+            color: var(--gray-600);
+            margin-bottom: var(--space-1);
+            display: flex;
+            align-items: center;
+            gap: var(--space-2);
+        }
+
+        .event-content p {
+            color: var(--gray-600);
+            line-height: 1.6;
+            margin-bottom: var(--space-4);
+        }
+
+        .recurring-events {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-6);
+        }
+
+        .recurring-event-category {
+            background: var(--white);
+            padding: var(--space-5);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+        }
+
+        .recurring-event-category h3 {
+            color: var(--primary-color);
+            margin-bottom: var(--space-4);
+            text-align: center;
+            border-bottom: 2px solid var(--gray-200);
+            padding-bottom: var(--space-2);
+        }
+
+        .recurring-event-list {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-3);
+        }
+
+        .recurring-event {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-1);
+            padding: var(--space-3);
+            background: var(--gray-50);
+            border-radius: var(--radius);
+            transition: var(--transition);
+        }
+
+        .recurring-event:hover {
+            background: var(--gray-100);
+        }
+
+        .recurring-event strong {
+            color: var(--primary-color);
+        }
+
+        .recurring-event span {
+            color: var(--gray-600);
+            font-size: var(--text-sm);
+        }
+
+        @media (max-width: 768px) {
+            .calendar-nav {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .calendar-controls {
+                justify-content: center;
+            }
+            
+            .event-item {
+                flex-direction: column;
+            }
+            
+            .event-date {
+                align-self: flex-start;
+            }
+            
+            .event-meta {
+                flex-direction: column;
+                gap: var(--space-2);
+            }
+            
+            .featured-events-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .recurring-events {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</body>
+</html>
